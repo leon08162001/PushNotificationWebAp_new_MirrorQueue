@@ -1064,3 +1064,5 @@ System.Threading.ThreadAbortException: 執行緒已經中止。
    於 System.Web.HttpResponse.End()
    於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
    於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-18 17:04:50,827 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-18 17:06:18,297 [10] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender

@@ -142,7 +142,7 @@ namespace PushNotificationWebAp
                         if (log.IsInfoEnabled) log.Info("Send JefferiesExcuReport Message from MQSender");
                     }
                     MultiMQMessage.Clear();
-                    System.Threading.Thread.Sleep(100);
+                    //System.Threading.Thread.Sleep(100);
                     SendFiles(Message.PushMessageID);
                 }
             }
