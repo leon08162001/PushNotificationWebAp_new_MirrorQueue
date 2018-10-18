@@ -1,0 +1,423 @@
+2018-10-07 08:17:21,249 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 08:17:51,986 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 08:19:10,432 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 08:20:48,673 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 08:21:34,785 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 08:35:30,924 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 無效的 URI: 無法剖析主機名稱。
+System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Uri..ctor(String uriString)
+   於 Apache.NMS.Util.URISupport.CreateCompatibleUri(String uriString)
+   於 Apache.NMS.ActiveMQ.ConnectionFactory..ctor(String brokerUri, String clientID)
+   於 Apache.NMS.ActiveMQ.ConnectionFactory..ctor(String brokerUri)
+   於 Common.LinkLayer.BaseMQAdapter.CheckActiveMQAlive() 於 G:\PushNotificationWebAp_new\Common\LinkLayer\BaseMQAdapter.cs: 行 361
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 56
+2018-10-07 08:36:18,806 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 08:36:51,808 [12] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 08:37:34,939 [12] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 08:38:21,747 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 08:39:01,313 [13] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 08:39:09,946 [10] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 08:39:53,538 [13] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 09:11:57,346 [12] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 09:12:24,758 [12] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 09:12:31,019 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 09:14:44,629 [12] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 09:15:12,684 [12] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 09:15:36,116 [12] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 09:16:44,908 [23] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 09:18:18,760 [8] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 09:20:41,000 [38] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 09:24:36,532 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 09:24:56,365 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 09:25:32,194 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 09:29:38,906 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 09:29:58,959 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 11:34:28,045 [10] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 11:34:35,669 [9] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 11:34:40,351 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 11:35:01,040 [19] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 11:39:03,148 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 11:39:25,628 [12] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 11:44:03,249 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 11:44:16,686 [12] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 11:45:11,183 [12] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 11:46:38,087 [12] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 13:08:50,185 [5] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 13:09:04,371 [5] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 13:09:57,310 [6] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 13:10:28,170 [5] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 13:11:13,099 [7] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 13:12:30,747 [5] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 13:13:42,814 [5] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 13:18:54,706 [34] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 19:31:10,572 [14] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-07 19:32:11,134 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61

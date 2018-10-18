@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DBModels.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="JA_EMPOLYEE">
+          <Key>
+            <PropertyRef Name="empolyee_no" />
+          </Key>
+          <Property Name="company_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="empolyee_no" Type="smallint" Nullable="false" />
+          <Property Name="social_security_number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="empolyee_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="empolyee_last_name" Type="nvarchar" MaxLength="55" />
+          <Property Name="empolyee_first_name" Type="nvarchar" MaxLength="200" />
+          <Property Name="employee_english_name" Type="nvarchar" MaxLength="255" />
+          <Property Name="empolyee_english_last_name" Type="nvarchar" MaxLength="55" />
+          <Property Name="empolyee_english_first_name" Type="nvarchar" MaxLength="200" />
+          <Property Name="in_services_status" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="on_board_date" Type="date" Nullable="false" />
+          <Property Name="leaving_date" Type="date" />
+          <Property Name="cell_phone" Type="nvarchar" MaxLength="40" />
+          <Property Name="home_phone_no" Type="nvarchar" MaxLength="40" />
+          <Property Name="office_phone_no" Type="nvarchar" MaxLength="40" />
+          <Property Name="office_phone_extension" Type="nvarchar" MaxLength="10" />
+          <Property Name="email" Type="nvarchar" MaxLength="255" />
+          <Property Name="mailing_address" Type="nvarchar" MaxLength="255" />
+          <Property Name="division_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="division_effective_date" Type="date" />
+          <Property Name="job_title_code" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="job_effective_date" Type="date" />
+          <Property Name="opr_id" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="opr_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="opr_date" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="opr_ip_address" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="opr_gps_address" Type="nvarchar" MaxLength="40" />
+          <Property Name="enable_push" Type="bit" />
+        </EntityType>
+        <EntityType Name="ZZ_APPLICATION">
+          <Key>
+            <PropertyRef Name="company_code" />
+            <PropertyRef Name="application_no" />
+          </Key>
+          <Property Name="company_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="application_no" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="application_no_front" Type="nvarchar" MaxLength="50" />
+          <Property Name="application_category" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="date_of_application" Type="date" />
+          <Property Name="status_of_application" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="data_created_method" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="type_of_applicant" Type="nvarchar" MaxLength="3" />
+          <Property Name="idno_of_applicant" Type="nvarchar" MaxLength="100" />
+          <Property Name="name_of_applicant" Type="nvarchar" MaxLength="255" />
+          <Property Name="birthday" Type="date" />
+          <Property Name="sex_code" Type="nvarchar" MaxLength="3" />
+          <Property Name="issue_date" Type="date" />
+          <Property Name="issue_category" Type="nvarchar" MaxLength="3" />
+          <Property Name="name_of_father" Type="nvarchar" MaxLength="50" />
+          <Property Name="name_of_mother" Type="nvarchar" MaxLength="50" />
+          <Property Name="name_of_spouse" Type="nvarchar" MaxLength="50" />
+          <Property Name="birthplace" Type="nvarchar" MaxLength="50" />
+          <Property Name="military_category" Type="nvarchar" MaxLength="50" />
+          <Property Name="identity_card_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="nhi_ic_card_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="issue_city" Type="nvarchar" MaxLength="2" />
+          <Property Name="setup_date" Type="date" />
+          <Property Name="currency_type" Type="nvarchar" MaxLength="3" />
+          <Property Name="amt_for_applying" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="period_for_applying" Type="smallint" />
+          <Property Name="programid_for_applying" Type="nvarchar" MaxLength="255" />
+          <Property Name="empolyeeno_of_service_staff" Type="smallint" />
+          <Property Name="empolyeeno_for_performance" Type="smallint" />
+          <Property Name="divisioncode_for_performance" Type="nvarchar" MaxLength="10" />
+          <Property Name="permanent_address" Type="nvarchar" MaxLength="255" />
+          <Property Name="permanent_address_zipcode" Type="nvarchar" MaxLength="5" />
+          <Property Name="permanent_address_city" Type="nvarchar" MaxLength="20" />
+          <Property Name="permanent_address_town" Type="nvarchar" MaxLength="20" />
+          <Property Name="permanent_address_street" Type="nvarchar" MaxLength="20" />
+          <Property Name="permanent_address_li" Type="nvarchar" MaxLength="20" />
+          <Property Name="permanent_address_lin" Type="nvarchar" MaxLength="6" />
+          <Property Name="permanent_address_section" Type="nvarchar" MaxLength="6" />
+          <Property Name="permanent_address_lane" Type="nvarchar" MaxLength="6" />
+          <Property Name="permanent_address_alley" Type="nvarchar" MaxLength="6" />
+          <Property Name="permanent_address_no" Type="nvarchar" MaxLength="6" />
+          <Property Name="permanent_address_floor" Type="nvarchar" MaxLength="6" />
+          <Property Name="permanent_address_room" Type="nvarchar" MaxLength="6" />
+          <Property Name="mailing_address" Type="nvarchar" MaxLength="255" />
+          <Property Name="mailing_address_zipcode" Type="nvarchar" MaxLength="5" />
+          <Property Name="mailing_address_city" Type="nvarchar" MaxLength="20" />
+          <Property Name="mailing_address_town" Type="nvarchar" MaxLength="20" />
+          <Property Name="mailing_address_street" Type="nvarchar" MaxLength="20" />
+          <Property Name="mailing_addresss_li" Type="nvarchar" MaxLength="20" />
+          <Property Name="mailing_addresss_lin" Type="nvarchar" MaxLength="6" />
+          <Property Name="mailing_address_section" Type="nvarchar" MaxLength="6" />
+          <Property Name="mailing_address_lane" Type="nvarchar" MaxLength="6" />
+          <Property Name="mailing_address_alley" Type="nvarchar" MaxLength="6" />
+          <Property Name="mailing_address_no" Type="nvarchar" MaxLength="6" />
+          <Property Name="mailing_address_floor" Type="nvarchar" MaxLength="6" />
+          <Property Name="mailing_address_room" Type="nvarchar" MaxLength="6" />
+          <Property Name="email" Type="nvarchar" MaxLength="255" />
+          <Property Name="cell_phone" Type="nvarchar" MaxLength="40" />
+          <Property Name="job_title" Type="nvarchar" MaxLength="255" />
+          <Property Name="education_level_cd" Type="nvarchar" MaxLength="3" />
+          <Property Name="living_condition_cd" Type="nvarchar" MaxLength="3" />
+          <Property Name="monthly_income_code" Type="nvarchar" MaxLength="3" />
+          <Property Name="marital_status_cd" Type="nvarchar" MaxLength="3" />
+          <Property Name="digital_certificate_status" Type="nvarchar" MaxLength="3" />
+          <Property Name="consent_letter_sign_status" Type="nvarchar" MaxLength="3" />
+          <Property Name="applicant_bankcode" Type="nvarchar" MaxLength="3" />
+          <Property Name="applicant_bankbranch_code" Type="nvarchar" MaxLength="4" />
+          <Property Name="applicant_bank_account" Type="nvarchar" MaxLength="50" />
+          <Property Name="suggested_interest_rate" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="suggested_amt" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="suggested_contract_type" Type="nvarchar" MaxLength="3" />
+          <Property Name="suggested_opinion" Type="nvarchar" MaxLength="2000" />
+          <Property Name="approved_interest_rate" Type="decimal" Precision="5" Scale="4" />
+          <Property Name="approved_amt" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="approved_contract_type" Type="nvarchar" MaxLength="3" />
+          <Property Name="datetime_of_acceptence" Type="datetime2" Precision="7" />
+          <Property Name="case_officer_employeeno" Type="smallint" />
+          <Property Name="opr_id" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="opr_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="opr_date" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="opr_ip_address" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="opr_gps_address" Type="nvarchar" MaxLength="40" />
+          <Property Name="enable_push" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="DBModelsStoreContainer">
+          <EntitySet Name="JA_EMPOLYEE" EntityType="Self.JA_EMPOLYEE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZZ_APPLICATION" EntityType="Self.ZZ_APPLICATION" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBModels" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="JA_EMPOLYEE">
+          <Key>
+            <PropertyRef Name="empolyee_no" />
+          </Key>
+          <Property Name="company_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="empolyee_no" Type="Int16" Nullable="false" />
+          <Property Name="social_security_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="empolyee_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="empolyee_last_name" Type="String" MaxLength="55" FixedLength="false" Unicode="true" />
+          <Property Name="empolyee_first_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="employee_english_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="empolyee_english_last_name" Type="String" MaxLength="55" FixedLength="false" Unicode="true" />
+          <Property Name="empolyee_english_first_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="in_services_status" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="on_board_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="leaving_date" Type="DateTime" Precision="0" />
+          <Property Name="cell_phone" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="home_phone_no" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="office_phone_no" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="office_phone_extension" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="mailing_address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="division_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="division_effective_date" Type="DateTime" Precision="0" />
+          <Property Name="job_title_code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="job_effective_date" Type="DateTime" Precision="0" />
+          <Property Name="opr_id" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="opr_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="opr_date" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="opr_ip_address" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="opr_gps_address" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="enable_push" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="MoneySQEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="JA_EMPOLYEE" EntityType="Self.JA_EMPOLYEE" />
+          <EntitySet Name="ZZ_APPLICATION" EntityType="DBModels.ZZ_APPLICATION" />
+        </EntityContainer>
+        <EntityType Name="ZZ_APPLICATION">
+          <Key>
+            <PropertyRef Name="company_code" />
+            <PropertyRef Name="application_no" />
+          </Key>
+          <Property Name="company_code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="application_no" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="application_no_front" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="application_category" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="date_of_application" Type="DateTime" Precision="0" />
+          <Property Name="status_of_application" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="data_created_method" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="type_of_applicant" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="idno_of_applicant" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="name_of_applicant" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="birthday" Type="DateTime" Precision="0" />
+          <Property Name="sex_code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="issue_date" Type="DateTime" Precision="0" />
+          <Property Name="issue_category" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="name_of_father" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name_of_mother" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name_of_spouse" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="birthplace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="military_category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="identity_card_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nhi_ic_card_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="issue_city" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="setup_date" Type="DateTime" Precision="0" />
+          <Property Name="currency_type" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="amt_for_applying" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="period_for_applying" Type="Int16" />
+          <Property Name="programid_for_applying" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="empolyeeno_of_service_staff" Type="Int16" />
+          <Property Name="empolyeeno_for_performance" Type="Int16" />
+          <Property Name="divisioncode_for_performance" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="permanent_address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="permanent_address_zipcode" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="permanent_address_city" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="permanent_address_town" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="permanent_address_street" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="permanent_address_li" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="permanent_address_lin" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="permanent_address_section" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="permanent_address_lane" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="permanent_address_alley" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="permanent_address_no" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="permanent_address_floor" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="permanent_address_room" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="mailing_address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="mailing_address_zipcode" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="mailing_address_city" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mailing_address_town" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mailing_address_street" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mailing_addresss_li" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mailing_addresss_lin" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="mailing_address_section" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="mailing_address_lane" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="mailing_address_alley" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="mailing_address_no" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="mailing_address_floor" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="mailing_address_room" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="cell_phone" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="job_title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="education_level_cd" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="living_condition_cd" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="monthly_income_code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="marital_status_cd" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="digital_certificate_status" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="consent_letter_sign_status" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="applicant_bankcode" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="applicant_bankbranch_code" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="applicant_bank_account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="suggested_interest_rate" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="suggested_amt" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="suggested_contract_type" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="suggested_opinion" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="approved_interest_rate" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="approved_amt" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="approved_contract_type" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="datetime_of_acceptence" Type="DateTime" Precision="7" />
+          <Property Name="case_officer_employeeno" Type="Int16" />
+          <Property Name="opr_id" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="opr_name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="opr_date" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="opr_ip_address" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="opr_gps_address" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="enable_push" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBModelsStoreContainer" CdmEntityContainer="MoneySQEntities">
+          <EntitySetMapping Name="JA_EMPOLYEE">
+            <EntityTypeMapping TypeName="DBModels.JA_EMPOLYEE">
+              <MappingFragment StoreEntitySet="JA_EMPOLYEE">
+                <ScalarProperty Name="enable_push" ColumnName="enable_push" />
+                <ScalarProperty Name="company_code" ColumnName="company_code" />
+                <ScalarProperty Name="empolyee_no" ColumnName="empolyee_no" />
+                <ScalarProperty Name="social_security_number" ColumnName="social_security_number" />
+                <ScalarProperty Name="empolyee_name" ColumnName="empolyee_name" />
+                <ScalarProperty Name="empolyee_last_name" ColumnName="empolyee_last_name" />
+                <ScalarProperty Name="empolyee_first_name" ColumnName="empolyee_first_name" />
+                <ScalarProperty Name="employee_english_name" ColumnName="employee_english_name" />
+                <ScalarProperty Name="empolyee_english_last_name" ColumnName="empolyee_english_last_name" />
+                <ScalarProperty Name="empolyee_english_first_name" ColumnName="empolyee_english_first_name" />
+                <ScalarProperty Name="in_services_status" ColumnName="in_services_status" />
+                <ScalarProperty Name="on_board_date" ColumnName="on_board_date" />
+                <ScalarProperty Name="leaving_date" ColumnName="leaving_date" />
+                <ScalarProperty Name="cell_phone" ColumnName="cell_phone" />
+                <ScalarProperty Name="home_phone_no" ColumnName="home_phone_no" />
+                <ScalarProperty Name="office_phone_no" ColumnName="office_phone_no" />
+                <ScalarProperty Name="office_phone_extension" ColumnName="office_phone_extension" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mailing_address" ColumnName="mailing_address" />
+                <ScalarProperty Name="division_code" ColumnName="division_code" />
+                <ScalarProperty Name="division_effective_date" ColumnName="division_effective_date" />
+                <ScalarProperty Name="job_title_code" ColumnName="job_title_code" />
+                <ScalarProperty Name="job_effective_date" ColumnName="job_effective_date" />
+                <ScalarProperty Name="opr_id" ColumnName="opr_id" />
+                <ScalarProperty Name="opr_name" ColumnName="opr_name" />
+                <ScalarProperty Name="opr_date" ColumnName="opr_date" />
+                <ScalarProperty Name="opr_ip_address" ColumnName="opr_ip_address" />
+                <ScalarProperty Name="opr_gps_address" ColumnName="opr_gps_address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZZ_APPLICATION">
+            <EntityTypeMapping TypeName="DBModels.ZZ_APPLICATION">
+              <MappingFragment StoreEntitySet="ZZ_APPLICATION">
+                <ScalarProperty Name="enable_push" ColumnName="enable_push" />
+                <ScalarProperty Name="opr_gps_address" ColumnName="opr_gps_address" />
+                <ScalarProperty Name="opr_ip_address" ColumnName="opr_ip_address" />
+                <ScalarProperty Name="opr_date" ColumnName="opr_date" />
+                <ScalarProperty Name="opr_name" ColumnName="opr_name" />
+                <ScalarProperty Name="opr_id" ColumnName="opr_id" />
+                <ScalarProperty Name="case_officer_employeeno" ColumnName="case_officer_employeeno" />
+                <ScalarProperty Name="datetime_of_acceptence" ColumnName="datetime_of_acceptence" />
+                <ScalarProperty Name="approved_contract_type" ColumnName="approved_contract_type" />
+                <ScalarProperty Name="approved_amt" ColumnName="approved_amt" />
+                <ScalarProperty Name="approved_interest_rate" ColumnName="approved_interest_rate" />
+                <ScalarProperty Name="suggested_opinion" ColumnName="suggested_opinion" />
+                <ScalarProperty Name="suggested_contract_type" ColumnName="suggested_contract_type" />
+                <ScalarProperty Name="suggested_amt" ColumnName="suggested_amt" />
+                <ScalarProperty Name="suggested_interest_rate" ColumnName="suggested_interest_rate" />
+                <ScalarProperty Name="applicant_bank_account" ColumnName="applicant_bank_account" />
+                <ScalarProperty Name="applicant_bankbranch_code" ColumnName="applicant_bankbranch_code" />
+                <ScalarProperty Name="applicant_bankcode" ColumnName="applicant_bankcode" />
+                <ScalarProperty Name="consent_letter_sign_status" ColumnName="consent_letter_sign_status" />
+                <ScalarProperty Name="digital_certificate_status" ColumnName="digital_certificate_status" />
+                <ScalarProperty Name="marital_status_cd" ColumnName="marital_status_cd" />
+                <ScalarProperty Name="monthly_income_code" ColumnName="monthly_income_code" />
+                <ScalarProperty Name="living_condition_cd" ColumnName="living_condition_cd" />
+                <ScalarProperty Name="education_level_cd" ColumnName="education_level_cd" />
+                <ScalarProperty Name="job_title" ColumnName="job_title" />
+                <ScalarProperty Name="cell_phone" ColumnName="cell_phone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mailing_address_room" ColumnName="mailing_address_room" />
+                <ScalarProperty Name="mailing_address_floor" ColumnName="mailing_address_floor" />
+                <ScalarProperty Name="mailing_address_no" ColumnName="mailing_address_no" />
+                <ScalarProperty Name="mailing_address_alley" ColumnName="mailing_address_alley" />
+                <ScalarProperty Name="mailing_address_lane" ColumnName="mailing_address_lane" />
+                <ScalarProperty Name="mailing_address_section" ColumnName="mailing_address_section" />
+                <ScalarProperty Name="mailing_addresss_lin" ColumnName="mailing_addresss_lin" />
+                <ScalarProperty Name="mailing_addresss_li" ColumnName="mailing_addresss_li" />
+                <ScalarProperty Name="mailing_address_street" ColumnName="mailing_address_street" />
+                <ScalarProperty Name="mailing_address_town" ColumnName="mailing_address_town" />
+                <ScalarProperty Name="mailing_address_city" ColumnName="mailing_address_city" />
+                <ScalarProperty Name="mailing_address_zipcode" ColumnName="mailing_address_zipcode" />
+                <ScalarProperty Name="mailing_address" ColumnName="mailing_address" />
+                <ScalarProperty Name="permanent_address_room" ColumnName="permanent_address_room" />
+                <ScalarProperty Name="permanent_address_floor" ColumnName="permanent_address_floor" />
+                <ScalarProperty Name="permanent_address_no" ColumnName="permanent_address_no" />
+                <ScalarProperty Name="permanent_address_alley" ColumnName="permanent_address_alley" />
+                <ScalarProperty Name="permanent_address_lane" ColumnName="permanent_address_lane" />
+                <ScalarProperty Name="permanent_address_section" ColumnName="permanent_address_section" />
+                <ScalarProperty Name="permanent_address_lin" ColumnName="permanent_address_lin" />
+                <ScalarProperty Name="permanent_address_li" ColumnName="permanent_address_li" />
+                <ScalarProperty Name="permanent_address_street" ColumnName="permanent_address_street" />
+                <ScalarProperty Name="permanent_address_town" ColumnName="permanent_address_town" />
+                <ScalarProperty Name="permanent_address_city" ColumnName="permanent_address_city" />
+                <ScalarProperty Name="permanent_address_zipcode" ColumnName="permanent_address_zipcode" />
+                <ScalarProperty Name="permanent_address" ColumnName="permanent_address" />
+                <ScalarProperty Name="divisioncode_for_performance" ColumnName="divisioncode_for_performance" />
+                <ScalarProperty Name="empolyeeno_for_performance" ColumnName="empolyeeno_for_performance" />
+                <ScalarProperty Name="empolyeeno_of_service_staff" ColumnName="empolyeeno_of_service_staff" />
+                <ScalarProperty Name="programid_for_applying" ColumnName="programid_for_applying" />
+                <ScalarProperty Name="period_for_applying" ColumnName="period_for_applying" />
+                <ScalarProperty Name="amt_for_applying" ColumnName="amt_for_applying" />
+                <ScalarProperty Name="currency_type" ColumnName="currency_type" />
+                <ScalarProperty Name="setup_date" ColumnName="setup_date" />
+                <ScalarProperty Name="issue_city" ColumnName="issue_city" />
+                <ScalarProperty Name="nhi_ic_card_no" ColumnName="nhi_ic_card_no" />
+                <ScalarProperty Name="identity_card_no" ColumnName="identity_card_no" />
+                <ScalarProperty Name="military_category" ColumnName="military_category" />
+                <ScalarProperty Name="birthplace" ColumnName="birthplace" />
+                <ScalarProperty Name="name_of_spouse" ColumnName="name_of_spouse" />
+                <ScalarProperty Name="name_of_mother" ColumnName="name_of_mother" />
+                <ScalarProperty Name="name_of_father" ColumnName="name_of_father" />
+                <ScalarProperty Name="issue_category" ColumnName="issue_category" />
+                <ScalarProperty Name="issue_date" ColumnName="issue_date" />
+                <ScalarProperty Name="sex_code" ColumnName="sex_code" />
+                <ScalarProperty Name="birthday" ColumnName="birthday" />
+                <ScalarProperty Name="name_of_applicant" ColumnName="name_of_applicant" />
+                <ScalarProperty Name="idno_of_applicant" ColumnName="idno_of_applicant" />
+                <ScalarProperty Name="type_of_applicant" ColumnName="type_of_applicant" />
+                <ScalarProperty Name="data_created_method" ColumnName="data_created_method" />
+                <ScalarProperty Name="status_of_application" ColumnName="status_of_application" />
+                <ScalarProperty Name="date_of_application" ColumnName="date_of_application" />
+                <ScalarProperty Name="application_category" ColumnName="application_category" />
+                <ScalarProperty Name="application_no_front" ColumnName="application_no_front" />
+                <ScalarProperty Name="application_no" ColumnName="application_no" />
+                <ScalarProperty Name="company_code" ColumnName="company_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,278 @@
+2018-10-11 20:28:36,457 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:28:36,598 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-11 20:29:12,030 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:12,135 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:12,241 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:12,348 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:12,454 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:12,560 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:12,665 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:12,771 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:12,878 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:12,984 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:13,090 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:13,196 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:13,303 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:13,409 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:13,515 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:13,622 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:13,728 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:13,836 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:13,942 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:14,048 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:14,153 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:14,259 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:14,365 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:14,470 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:14,576 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:14,682 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:14,788 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:14,895 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:15,001 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:15,107 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:15,212 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:15,318 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:15,428 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:15,536 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:15,641 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:15,748 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:15,855 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:15,961 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:16,066 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:16,172 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:16,278 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:16,382 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:16,488 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:16,595 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:16,700 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:16,806 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:16,912 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:17,018 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:17,123 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:17,228 [18] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:29:17,345 [18] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
+2018-10-11 20:30:34,649 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:34,754 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:34,861 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:34,966 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:35,071 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:35,178 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:35,284 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:35,390 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:35,495 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:35,601 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:35,707 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:35,815 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:35,920 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:36,026 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:36,132 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:36,241 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:36,349 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:36,454 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:36,560 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:36,666 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:36,772 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:36,878 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:36,983 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:37,089 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:37,195 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:37,300 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:37,407 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:37,513 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:37,619 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:37,724 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:37,831 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:37,938 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:38,044 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:38,149 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:38,255 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:38,361 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:38,467 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:38,573 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:38,679 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:38,784 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:38,890 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:38,996 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:39,107 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:39,212 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:39,317 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:39,423 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:39,528 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:39,634 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:39,743 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:39,850 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:39,955 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:40,061 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:40,166 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:40,270 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:40,376 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:40,484 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:40,591 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:40,697 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:40,803 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:40,908 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:41,013 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:41,119 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:41,225 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:41,332 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:41,437 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:41,543 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:41,650 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:41,755 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:41,861 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:41,966 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:42,072 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:42,176 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:42,283 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:42,388 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:42,495 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:42,599 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:42,705 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:42,812 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:42,917 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:43,022 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:43,129 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:43,238 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:43,343 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:43,449 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:43,554 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:43,659 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:43,765 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:43,871 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:43,978 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:44,083 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:44,189 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:44,295 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:44,399 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:44,504 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:44,611 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:44,717 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:44,821 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:44,927 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:45,033 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:45,137 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:45,242 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:45,349 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:45,455 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:45,561 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:45,666 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:45,772 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:45,877 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:45,982 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:46,087 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:46,193 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:46,299 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:46,405 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:46,510 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:46,617 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:46,722 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:46,828 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:46,934 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:47,042 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:47,149 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:47,254 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:47,360 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:47,465 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:47,571 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:47,676 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:47,781 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:47,887 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:47,995 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:48,100 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:48,206 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:48,312 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:48,418 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:48,523 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:48,629 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:48,735 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:48,841 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:48,947 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:49,052 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:49,159 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:49,264 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:49,369 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:49,479 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:49,585 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:49,691 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:49,797 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:49,906 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:50,011 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:50,116 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:50,221 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:50,341 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:50,445 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:50,550 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:50,655 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:50,759 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:50,873 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:50,979 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:51,084 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:51,189 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:51,296 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:51,401 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:51,506 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:51,612 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:51,718 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:51,825 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:51,930 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:52,036 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:52,142 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:52,248 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:52,353 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:52,459 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:52,566 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:52,670 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:52,775 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:52,881 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:52,986 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:53,091 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:53,198 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:53,303 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:53,409 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:53,514 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:53,619 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:53,726 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:53,834 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:53,939 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:54,046 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:54,151 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:54,257 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:54,363 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:54,467 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:54,573 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:54,679 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:54,785 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:54,891 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:54,997 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:55,103 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:55,209 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:55,314 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:55,420 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:55,525 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:55,630 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:55,736 [11] INFO  PushNotificationWebAp.MQPushMessageDemo [(null)] - Send JefferiesExcuReport Message from MQSender
+2018-10-11 20:30:55,854 [11] ERROR PushNotificationWebAp.MQPushMessageDemo [(null)] - 執行緒已經中止。
+System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 PushNotificationWebAp.MQPushMessageDemo.btnPushMessage_Click(Object sender, EventArgs e) 於 G:\PushNotificationWebAp_new\PushNotificationWebAp\MQPushMessageDemo.aspx.cs: 行 61
