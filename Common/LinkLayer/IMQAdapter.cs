@@ -94,7 +94,7 @@ namespace Common.LinkLayer
         SynchronizationContext UISyncContext { get; }
         TopicTypeHandler Handler { get; set; }
         /// <summary>
-        /// Qurue和Topic時,不須指定任何參數;VirtualTopic需指定第一個參數;Durable Topic則需指定兩個參數
+        /// Qurue和Topic時,不須指定任何參數;VirtualTopic需指定第一個參數;Durable Topic則需指定兩個參數;MirrorQueue時若Durable則需指定兩個參數,若不Durable不須指定任何參數
         /// </summary>
         /// <param name="ClientID"></param>
         /// <param name="IsDurableConsumer"></param>
