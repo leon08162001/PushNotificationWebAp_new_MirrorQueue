@@ -1,7 +1,7 @@
 <!--This file is used by ASP.NET applications to discover session state servers and to distribute session load. DO NOT MODIFY.-->
 <SessionStateServers>
   <Servers>
-    <add Host="192.168.43.248" Port="42424" Online="False" />
+    <add Host="192.168.43.114" Port="42424" Online="False" />
     <add Host="192.168.43.115" Port="42424" Online="True" />
   </Servers>
 </SessionStateServers>
