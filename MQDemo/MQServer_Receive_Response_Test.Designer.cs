@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtURI = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtReceivedOTATopicName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtMessageCount = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,120 +66,99 @@
             // 
             this.txtReceivedJefferiesTopicName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtReceivedJefferiesTopicName.Location = new System.Drawing.Point(230, 191);
-            this.txtReceivedJefferiesTopicName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtReceivedJefferiesTopicName.Location = new System.Drawing.Point(205, 160);
             this.txtReceivedJefferiesTopicName.Name = "txtReceivedJefferiesTopicName";
             this.txtReceivedJefferiesTopicName.ReadOnly = true;
-            this.txtReceivedJefferiesTopicName.Size = new System.Drawing.Size(630, 29);
+            this.txtReceivedJefferiesTopicName.Size = new System.Drawing.Size(561, 25);
             this.txtReceivedJefferiesTopicName.TabIndex = 21;
             // 
             // txtPassword
             // 
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPassword.Location = new System.Drawing.Point(638, 73);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Location = new System.Drawing.Point(567, 61);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ReadOnly = true;
-            this.txtPassword.Size = new System.Drawing.Size(224, 29);
+            this.txtPassword.Size = new System.Drawing.Size(199, 25);
             this.txtPassword.TabIndex = 20;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 82);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(0, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 18);
+            this.label1.Size = new System.Drawing.Size(31, 15);
             this.label1.TabIndex = 19;
             this.label1.Text = "URI";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(364, 79);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(323, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 18);
+            this.label2.Size = new System.Drawing.Size(63, 15);
             this.label2.TabIndex = 18;
             this.label2.Text = "Username";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(566, 79);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(503, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 18);
+            this.label3.Size = new System.Drawing.Size(60, 15);
             this.label3.TabIndex = 16;
             this.label3.Text = "Password";
             // 
             // txtURI
             // 
-            this.txtURI.Location = new System.Drawing.Point(39, 75);
-            this.txtURI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtURI.Location = new System.Drawing.Point(34, 62);
             this.txtURI.Name = "txtURI";
             this.txtURI.ReadOnly = true;
-            this.txtURI.Size = new System.Drawing.Size(318, 29);
+            this.txtURI.Size = new System.Drawing.Size(283, 25);
             this.txtURI.TabIndex = 15;
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(442, 73);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserName.Location = new System.Drawing.Point(393, 61);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.ReadOnly = true;
-            this.txtUserName.Size = new System.Drawing.Size(116, 29);
+            this.txtUserName.Size = new System.Drawing.Size(103, 25);
             this.txtUserName.TabIndex = 17;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 195);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(228, 18);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Received Jefferies Topic Name";
             // 
             // txtReceivedOTATopicName
             // 
             this.txtReceivedOTATopicName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtReceivedOTATopicName.Location = new System.Drawing.Point(230, 231);
-            this.txtReceivedOTATopicName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtReceivedOTATopicName.Location = new System.Drawing.Point(205, 193);
             this.txtReceivedOTATopicName.Name = "txtReceivedOTATopicName";
             this.txtReceivedOTATopicName.ReadOnly = true;
-            this.txtReceivedOTATopicName.Size = new System.Drawing.Size(630, 29);
+            this.txtReceivedOTATopicName.Size = new System.Drawing.Size(561, 25);
             this.txtReceivedOTATopicName.TabIndex = 24;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 237);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(25, 199);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(201, 18);
+            this.label4.Size = new System.Drawing.Size(165, 15);
             this.label4.TabIndex = 25;
             this.label4.Text = "Received OTA Topic Name";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 321);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(24, 270);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(202, 18);
+            this.label6.Size = new System.Drawing.Size(166, 15);
             this.label6.TabIndex = 27;
             this.label6.Text = "Response OTA Topic Name";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 281);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(6, 235);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(229, 18);
+            this.label7.Size = new System.Drawing.Size(184, 15);
             this.label7.TabIndex = 26;
             this.label7.Text = "Response Jefferies Topic Name";
             // 
@@ -187,42 +166,37 @@
             // 
             this.txtResponseJefferiesTopicName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtResponseJefferiesTopicName.Location = new System.Drawing.Point(230, 273);
-            this.txtResponseJefferiesTopicName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtResponseJefferiesTopicName.Location = new System.Drawing.Point(205, 227);
             this.txtResponseJefferiesTopicName.Name = "txtResponseJefferiesTopicName";
             this.txtResponseJefferiesTopicName.ReadOnly = true;
-            this.txtResponseJefferiesTopicName.Size = new System.Drawing.Size(630, 29);
+            this.txtResponseJefferiesTopicName.Size = new System.Drawing.Size(561, 25);
             this.txtResponseJefferiesTopicName.TabIndex = 28;
             // 
             // txtResponseOTATopicName
             // 
             this.txtResponseOTATopicName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtResponseOTATopicName.Location = new System.Drawing.Point(230, 317);
-            this.txtResponseOTATopicName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtResponseOTATopicName.Location = new System.Drawing.Point(205, 265);
             this.txtResponseOTATopicName.Name = "txtResponseOTATopicName";
             this.txtResponseOTATopicName.ReadOnly = true;
-            this.txtResponseOTATopicName.Size = new System.Drawing.Size(630, 29);
+            this.txtResponseOTATopicName.Size = new System.Drawing.Size(561, 25);
             this.txtResponseOTATopicName.TabIndex = 29;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Location = new System.Drawing.Point(42, 6);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Location = new System.Drawing.Point(38, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(546, 60);
+            this.groupBox3.Size = new System.Drawing.Size(486, 50);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "說明：";
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(12, 28);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(10, 24);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(525, 28);
+            this.label9.Size = new System.Drawing.Size(466, 24);
             this.label9.TabIndex = 0;
             this.label9.Text = "對於表單MQSender來說,此程式為Server端的接收及處理回應程式;";
             // 
@@ -235,10 +209,9 @@
             this.columnHeader2});
             this.LvSystemInfo.FullRowSelect = true;
             this.LvSystemInfo.GridLines = true;
-            this.LvSystemInfo.Location = new System.Drawing.Point(6, 417);
-            this.LvSystemInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LvSystemInfo.Location = new System.Drawing.Point(6, 347);
             this.LvSystemInfo.Name = "LvSystemInfo";
-            this.LvSystemInfo.Size = new System.Drawing.Size(855, 361);
+            this.LvSystemInfo.Size = new System.Drawing.Size(761, 302);
             this.LvSystemInfo.TabIndex = 31;
             this.LvSystemInfo.UseCompatibleStateImageBehavior = false;
             this.LvSystemInfo.View = System.Windows.Forms.View.Details;
@@ -260,19 +233,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 375);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(6, 327);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(132, 18);
+            this.label8.Size = new System.Drawing.Size(111, 15);
             this.label8.TabIndex = 32;
             this.label8.Text = "Work Thread Info";
             // 
             // btnClearInfo
             // 
-            this.btnClearInfo.Location = new System.Drawing.Point(150, 361);
-            this.btnClearInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClearInfo.Location = new System.Drawing.Point(134, 301);
             this.btnClearInfo.Name = "btnClearInfo";
-            this.btnClearInfo.Size = new System.Drawing.Size(112, 35);
+            this.btnClearInfo.Size = new System.Drawing.Size(99, 29);
             this.btnClearInfo.TabIndex = 33;
             this.btnClearInfo.Text = "清除資訊";
             this.btnClearInfo.UseVisualStyleBackColor = true;
@@ -281,38 +252,34 @@
             // lblJEFFUnhandledCount
             // 
             this.lblJEFFUnhandledCount.AutoSize = true;
-            this.lblJEFFUnhandledCount.Location = new System.Drawing.Point(471, 389);
-            this.lblJEFFUnhandledCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblJEFFUnhandledCount.Location = new System.Drawing.Point(418, 325);
             this.lblJEFFUnhandledCount.Name = "lblJEFFUnhandledCount";
-            this.lblJEFFUnhandledCount.Size = new System.Drawing.Size(0, 18);
+            this.lblJEFFUnhandledCount.Size = new System.Drawing.Size(0, 15);
             this.lblJEFFUnhandledCount.TabIndex = 41;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(292, 389);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(259, 325);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(174, 18);
+            this.label10.Size = new System.Drawing.Size(146, 15);
             this.label10.TabIndex = 40;
             this.label10.Text = "JEFF待處理資料筆數:";
             // 
             // lblOTAUnhandledCount
             // 
             this.lblOTAUnhandledCount.AutoSize = true;
-            this.lblOTAUnhandledCount.Location = new System.Drawing.Point(471, 361);
-            this.lblOTAUnhandledCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOTAUnhandledCount.Location = new System.Drawing.Point(418, 301);
             this.lblOTAUnhandledCount.Name = "lblOTAUnhandledCount";
-            this.lblOTAUnhandledCount.Size = new System.Drawing.Size(0, 18);
+            this.lblOTAUnhandledCount.Size = new System.Drawing.Size(0, 15);
             this.lblOTAUnhandledCount.TabIndex = 39;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(292, 361);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(259, 301);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(173, 18);
+            this.label11.Size = new System.Drawing.Size(145, 15);
             this.label11.TabIndex = 38;
             this.label11.Text = "OTA待處理資料筆數:";
             // 
@@ -324,20 +291,18 @@
             "Queue",
             "VirtualTopic",
             "MirrorQueue"});
-            this.cboDestinationFeature.Location = new System.Drawing.Point(230, 151);
-            this.cboDestinationFeature.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboDestinationFeature.Location = new System.Drawing.Point(205, 128);
             this.cboDestinationFeature.Name = "cboDestinationFeature";
-            this.cboDestinationFeature.Size = new System.Drawing.Size(158, 26);
+            this.cboDestinationFeature.Size = new System.Drawing.Size(141, 23);
             this.cboDestinationFeature.TabIndex = 45;
             this.cboDestinationFeature.SelectedIndexChanged += new System.EventHandler(this.cboDestinationFeature_SelectedIndexChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(127, 155);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(110, 133);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 18);
+            this.label12.Size = new System.Drawing.Size(80, 15);
             this.label12.TabIndex = 44;
             this.label12.Text = "Queue/Topic";
             // 
@@ -347,46 +312,54 @@
             this.cboFormat.Items.AddRange(new object[] {
             "Json",
             "Fix"});
-            this.cboFormat.Location = new System.Drawing.Point(230, 115);
+            this.cboFormat.Location = new System.Drawing.Point(205, 95);
+            this.cboFormat.Margin = new System.Windows.Forms.Padding(2);
             this.cboFormat.Name = "cboFormat";
-            this.cboFormat.Size = new System.Drawing.Size(93, 26);
+            this.cboFormat.Size = new System.Drawing.Size(83, 23);
             this.cboFormat.TabIndex = 47;
             this.cboFormat.SelectedIndexChanged += new System.EventHandler(this.cboFormat_SelectedIndexChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(108, 115);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(90, 100);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(123, 18);
+            this.label13.Size = new System.Drawing.Size(100, 15);
             this.label13.TabIndex = 46;
             this.label13.Text = "Message Format";
             // 
             // txtMessageCount
             // 
-            this.txtMessageCount.Location = new System.Drawing.Point(765, 364);
-            this.txtMessageCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMessageCount.Location = new System.Drawing.Point(680, 303);
             this.txtMessageCount.Name = "txtMessageCount";
             this.txtMessageCount.ReadOnly = true;
-            this.txtMessageCount.Size = new System.Drawing.Size(95, 29);
+            this.txtMessageCount.Size = new System.Drawing.Size(85, 25);
             this.txtMessageCount.TabIndex = 48;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(676, 370);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(601, 309);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(80, 18);
+            this.label14.Size = new System.Drawing.Size(67, 15);
             this.label14.TabIndex = 49;
             this.label14.Text = "處理筆數";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 163);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(183, 15);
+            this.label5.TabIndex = 50;
+            this.label5.Text = "Received Jefferies Topic Name";
+            // 
             // MQServer_Receive_Response_Test
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 659);
+            this.ClientSize = new System.Drawing.Size(768, 550);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtMessageCount);
             this.Controls.Add(this.cboFormat);
@@ -407,7 +380,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtReceivedOTATopicName);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtReceivedJefferiesTopicName);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label1);
@@ -415,7 +387,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtURI);
             this.Controls.Add(this.txtUserName);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MQServer_Receive_Response_Test";
             this.Text = "MQ Server Receive & Response Test";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing);
@@ -435,7 +406,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtURI;
         private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtReceivedOTATopicName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
@@ -459,5 +429,6 @@
         private System.Windows.Forms.Label label13;
         public System.Windows.Forms.TextBox txtMessageCount;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label5;
     }
 }

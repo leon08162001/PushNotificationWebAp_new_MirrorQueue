@@ -49,6 +49,7 @@ namespace MQDemoSubscriber
                 config = (Config)applicationContext.GetObject("Config");
                 this.Text = this.Text + " " + config.MQClientID;
                 txtURI.Text = config.MQ_network + ":" + config.MQ_service;
+                txtUserName.Text = config.MQUserID;
                 txtPassword.Text = config.MQPwd;
                 txtReceivedJefferiesTopicName.Text = config.jefferiesExcuReport_Listener_Topic;
                 txtReceivedOTATopicName.Text = config.otaExport_Listener_Topic;
@@ -167,10 +168,10 @@ namespace MQDemoSubscriber
 
         private void cboDestinationFeature_SelectedIndexChanged(object sender, EventArgs e)
         {
-            label4.Text = cboDestinationFeature.SelectedIndex == 0 || cboDestinationFeature.SelectedIndex == 2 ? "Topic" : "Queue";
-            label5.Text = cboDestinationFeature.SelectedIndex == 0 || cboDestinationFeature.SelectedIndex == 2 ? "Topic" : "Queue";
-            label6.Text = cboDestinationFeature.SelectedIndex == 0 || cboDestinationFeature.SelectedIndex == 2 ? "Topic" : "Queue";
-            label7.Text = cboDestinationFeature.SelectedIndex == 0 || cboDestinationFeature.SelectedIndex == 2 ? "Topic" : "Queue";
+            label4.Text = cboDestinationFeature.SelectedIndex == 0 ? label4.Text.Replace("Queue", "Topic") : label4.Text.Replace("Topic", "Queue");
+            label5.Text = cboDestinationFeature.SelectedIndex == 0 ? label5.Text.Replace("Queue", "Topic") : label5.Text.Replace("Topic", "Queue");
+            label6.Text = cboDestinationFeature.SelectedIndex == 0 ? label6.Text.Replace("Queue", "Topic") : label6.Text.Replace("Topic", "Queue");
+            label7.Text = cboDestinationFeature.SelectedIndex == 0 ? label7.Text.Replace("Queue", "Topic") : label7.Text.Replace("Topic", "Queue");
             JefferiesExcuReportMQ.DestinationFeature = cboDestinationFeature.SelectedIndex == 0 ? DestinationFeature.Topic :
                     cboDestinationFeature.SelectedIndex == 1 ? DestinationFeature.Queue : cboDestinationFeature.SelectedIndex == 2 ? DestinationFeature.VirtualTopic : DestinationFeature.MirroredQueues;
             JefferiesExcuReportMQ.ReStartListener(JefferiesExcuReportMQ.ListenName);

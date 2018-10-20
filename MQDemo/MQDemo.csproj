@@ -103,17 +103,17 @@
       <DependentUpon>EMSServer_Receive_Response_Test.cs</DependentUpon>
     </Compile>
     <Compile Include="Messager\SignMessage.cs" />
-    <Compile Include="MQ_Client_Receive_Show_Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MQ_Client_Receive_Show_Test.Designer.cs">
-      <DependentUpon>MQ_Client_Receive_Show_Test.cs</DependentUpon>
-    </Compile>
     <Compile Include="MQServer_Receive_Response_Test.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MQServer_Receive_Response_Test.Designer.cs">
       <DependentUpon>MQServer_Receive_Response_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MQ_Client_Receive_Show_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MQ_Client_Receive_Show_Test.Designer.cs">
+      <DependentUpon>MQ_Client_Receive_Show_Test.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalFunction.cs" />
     <Compile Include="Program.cs" />
@@ -127,11 +127,11 @@
     <EmbeddedResource Include="EMSServer_Receive_Response_Test.resx">
       <DependentUpon>EMSServer_Receive_Response_Test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MQ_Client_Receive_Show_Test.resx">
-      <DependentUpon>MQ_Client_Receive_Show_Test.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MQServer_Receive_Response_Test.resx">
       <DependentUpon>MQServer_Receive_Response_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MQ_Client_Receive_Show_Test.resx">
+      <DependentUpon>MQ_Client_Receive_Show_Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
