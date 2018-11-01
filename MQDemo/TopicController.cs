@@ -154,13 +154,6 @@ namespace MQDemoSubscriber
                                 };
 
                                 string JSONresult = JsonConvert.SerializeObject(MessageDT);
-                                //對android傳來的簽章資料驗章
-                                if (typeof(T) == typeof(SignMessage))
-                                {
-                                    List<SignMessage> SignMessage = JsonConvert.DeserializeObject<List<SignMessage>>(JSONresult, settings);
-                                    bool IsOK = CipherHelper.RsaVerifyData(DecEncCode.AESDecrypt(SignMessage[0].cipherText), SignMessage[0].sign, SignMessage[0].publickey);
-                                }
-                                //對android傳來的簽章資料驗章
 
                                 //List<T> Customer = JsonConvert.DeserializeObject<List<T>>(JSONresult, settings);
                                 List<loanApplication_customer> Customer = JsonConvert.DeserializeObject<List<loanApplication_customer>>(JSONresult, settings);
@@ -239,7 +232,15 @@ namespace MQDemoSubscriber
                                     Func<Type, DataTable, List<List<MessageField>>> ConvertTableToMessage = new Func<Type, DataTable, List<List<MessageField>>>(FixFactory.ConvertTableToMessage);
                                     WorkThreads.DoConvertSendTaskForJason(IMQAdapter, ConvertTableToMessage, MessageDT, "710");
                                 }
-                                ////分散式帳本模型新增test(使用pub/sub) begin
+
+                                //對android傳來的簽章資料驗章且分散資料庫儲存 begin
+                                CertificateDataVerifySaveDBTest<T>(MessageDT);
+                                //if (typeof(T) == typeof(SignMessage))
+                                //{
+                                //    List<SignMessage> SignMessage = JsonConvert.DeserializeObject<List<SignMessage>>(JSONresult, settings);
+                                //    bool IsOK = CipherHelper.RsaVerifyData(DecEncCode.AESDecrypt(SignMessage[0].cipherText), SignMessage[0].sign, SignMessage[0].publickey);
+                                //}
+
                                 //int userCount = TopicController.GetCount<comUser>();
                                 //comUser newUser = new comUser();
                                 //newUser.user_id = "katepan" + userCount;
@@ -258,7 +259,7 @@ namespace MQDemoSubscriber
                                 //newUser.last_upd_user = "leonlee";
                                 //newUser.last_upd_date = DateTime.Now;
                                 //bool result = TopicController.InsertUser(newUser);
-                                ////分散式帳本模型新增test(使用pub/sub) end
+                                //對android傳來的簽章資料驗章且分散資料庫儲存 end
                             }
                         }
                     }
@@ -735,6 +736,42 @@ namespace MQDemoSubscriber
         {
             SpecificEntityRepository<T> Entities = new SpecificEntityRepository<T>(new LAS_TWEntities("LAS_TWEntities_Encrypt"));
             return Entities.GetCount();
+        }
+        private static void CertificateDataVerifySaveDBTest<T>(DataTable MessageDT) where T : class
+        {
+            var settings = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+                MissingMemberHandling = MissingMemberHandling.Ignore
+            };
+            string JSONresult = JsonConvert.SerializeObject(MessageDT);
+            //對android傳來的簽章資料驗章
+            if (typeof(T) == typeof(SignMessage))
+            {
+                List<SignMessage> SignMessage = JsonConvert.DeserializeObject<List<SignMessage>>(JSONresult, settings);
+                bool IsOK = CipherHelper.RsaVerifyData(DecEncCode.AESDecrypt(SignMessage[0].cipherText), SignMessage[0].sign, SignMessage[0].publickey);
+            }
+            //對android傳來的簽章資料驗章
+            //分散式帳本模型資料新增test(使用pub/sub) begin
+            int userCount = TopicController.GetCount<comUser>();
+            comUser newUser = new comUser();
+            newUser.user_id = "katepan" + userCount;
+            newUser.country = "TWN";
+            newUser.first_name = "Kate";
+            newUser.last_name = "Pan";
+            newUser.dept = "CEO";
+            newUser.role = "GEN";
+            newUser.password = "F9-EC-8F-24-07-18-B8-C5-AD-71-6B-6F-E9-4D-14-E6";
+            newUser.active = true;
+            newUser.show_report = true;
+            newUser.access_report = true;
+            newUser.access_print = true;
+            newUser.limited_user = false;
+            newUser.advanced_user = true;
+            newUser.last_upd_user = "leonlee";
+            newUser.last_upd_date = DateTime.Now;
+            bool result = TopicController.InsertUser(newUser);
+            //分散式帳本模型資料新增test(使用pub/sub) end
         }
     }
 }
