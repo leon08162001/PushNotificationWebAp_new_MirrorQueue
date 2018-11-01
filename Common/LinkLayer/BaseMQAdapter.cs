@@ -886,26 +886,26 @@ namespace Common.LinkLayer
                     }
                     if (_DestinationFeature == DestinationFeature.Topic)
                     {
-                        if (_Selector.Equals(""))
+                        if (_IsDurableConsumer)
                         {
-                            if (_IsDurableConsumer)
+                            if (_Selector.Equals(""))
                             {
                                 _Consumer = _Session.CreateDurableConsumer(new ActiveMQTopic(_ListenName), _Connection.ClientId, null, false);
                             }
                             else
                             {
-                                _Consumer = _Session.CreateConsumer(new ActiveMQTopic(ListenName));
+                                _Consumer = _Session.CreateDurableConsumer(new ActiveMQTopic(_ListenName), _Connection.ClientId, _Selector, false);
                             }
                         }
                         else
                         {
-                            if (_IsDurableConsumer)
+                            if (_Selector.Equals(""))
                             {
-                                _Consumer = _Session.CreateDurableConsumer(new ActiveMQTopic(_ListenName), _Connection.ClientId, _Selector, false);
+                                _Consumer = _Session.CreateConsumer(new ActiveMQTopic(_ListenName));
                             }
                             else
                             {
-                                _Consumer = _Session.CreateConsumer(new ActiveMQTopic(ListenName), _Selector);
+                                _Consumer = _Session.CreateConsumer(new ActiveMQTopic(_ListenName), _Selector);
                             }
                         }
                         _Consumer.Listener += new MessageListener(listener_messageReceivedEventHandler);
@@ -1154,22 +1154,22 @@ namespace Common.LinkLayer
                 {
                     if (_DestinationFeature == DestinationFeature.Topic)
                     {
-                        if (_Selector.Equals(""))
+                        if (_IsDurableConsumer)
                         {
-                            if (_IsDurableConsumer)
+                            if (_Selector.Equals(""))
                             {
                                 _Consumer = _Session.CreateDurableConsumer(new ActiveMQTopic(_ListenName), _Connection.ClientId, null, false);
                             }
                             else
                             {
-                                _Consumer = _Session.CreateConsumer(new ActiveMQTopic(_ListenName));
+                                _Consumer = _Session.CreateDurableConsumer(new ActiveMQTopic(_ListenName), _Connection.ClientId, _Selector, false);
                             }
                         }
                         else
                         {
-                            if (_IsDurableConsumer)
+                            if (_Selector.Equals(""))
                             {
-                                _Consumer = _Session.CreateDurableConsumer(new ActiveMQTopic(_ListenName), _Connection.ClientId, _Selector, false);
+                                _Consumer = _Session.CreateConsumer(new ActiveMQTopic(_ListenName));
                             }
                             else
                             {

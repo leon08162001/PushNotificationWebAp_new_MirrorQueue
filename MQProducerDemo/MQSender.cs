@@ -428,8 +428,8 @@ namespace MQDemoProducer
 
         private void cboDestinationFeature_SelectedIndexChanged(object sender, EventArgs e)
         {
-            label4.Text = cboDestinationFeature.SelectedIndex == 0 || cboDestinationFeature.SelectedIndex == 2 ? "Topic" : "Queue";
-            label8.Text = cboDestinationFeature.SelectedIndex == 0 || cboDestinationFeature.SelectedIndex == 2 ? "Topic" : "Queue";
+            label4.Text = cboDestinationFeature.SelectedIndex == 0 ? label4.Text.Replace("Queue", "Topic") : label4.Text.Replace("Topic", "Queue");
+            label8.Text = cboDestinationFeature.SelectedIndex == 0 ? label8.Text.Replace("Queue", "Topic") : label8.Text.Replace("Topic", "Queue");
             JefferiesExcuReportMQ.DestinationFeature = cboDestinationFeature.SelectedIndex == 0 ? DestinationFeature.Topic :
                     cboDestinationFeature.SelectedIndex == 1 ? DestinationFeature.Queue : cboDestinationFeature.SelectedIndex == 2 ? DestinationFeature.VirtualTopic : DestinationFeature.MirroredQueues;
             JefferiesExcuReportMQ.ReStartListener(JefferiesExcuReportMQ.ListenName);

@@ -66,69 +66,69 @@
             // 
             this.txtReceivedJefferiesTopicName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtReceivedJefferiesTopicName.Location = new System.Drawing.Point(179, 139);
+            this.txtReceivedJefferiesTopicName.Location = new System.Drawing.Point(205, 161);
             this.txtReceivedJefferiesTopicName.Name = "txtReceivedJefferiesTopicName";
             this.txtReceivedJefferiesTopicName.ReadOnly = true;
-            this.txtReceivedJefferiesTopicName.Size = new System.Drawing.Size(491, 23);
+            this.txtReceivedJefferiesTopicName.Size = new System.Drawing.Size(561, 25);
             this.txtReceivedJefferiesTopicName.TabIndex = 21;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(502, 52);
+            this.txtPassword.Location = new System.Drawing.Point(574, 60);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ReadOnly = true;
-            this.txtPassword.Size = new System.Drawing.Size(106, 23);
+            this.txtPassword.Size = new System.Drawing.Size(121, 25);
             this.txtPassword.TabIndex = 20;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 59);
+            this.label1.Location = new System.Drawing.Point(0, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 14);
+            this.label1.Size = new System.Drawing.Size(31, 15);
             this.label1.TabIndex = 19;
             this.label1.Text = "URI";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(283, 57);
+            this.label2.Location = new System.Drawing.Point(323, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 14);
+            this.label2.Size = new System.Drawing.Size(63, 15);
             this.label2.TabIndex = 18;
             this.label2.Text = "Username";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(443, 57);
+            this.label3.Location = new System.Drawing.Point(506, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 14);
+            this.label3.Size = new System.Drawing.Size(60, 15);
             this.label3.TabIndex = 16;
             this.label3.Text = "Password";
             // 
             // txtURI
             // 
-            this.txtURI.Location = new System.Drawing.Point(30, 54);
+            this.txtURI.Location = new System.Drawing.Point(34, 62);
             this.txtURI.Name = "txtURI";
             this.txtURI.ReadOnly = true;
-            this.txtURI.Size = new System.Drawing.Size(248, 23);
+            this.txtURI.Size = new System.Drawing.Size(283, 25);
             this.txtURI.TabIndex = 15;
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(344, 53);
+            this.txtUserName.Location = new System.Drawing.Point(393, 61);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.ReadOnly = true;
-            this.txtUserName.Size = new System.Drawing.Size(94, 23);
+            this.txtUserName.Size = new System.Drawing.Size(107, 25);
             this.txtUserName.TabIndex = 17;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 142);
+            this.label5.Location = new System.Drawing.Point(7, 167);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 14);
+            this.label5.Size = new System.Drawing.Size(183, 15);
             this.label5.TabIndex = 23;
             this.label5.Text = "Received Jefferies Topic Name";
             // 
@@ -136,36 +136,36 @@
             // 
             this.txtReceivedOTATopicName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtReceivedOTATopicName.Location = new System.Drawing.Point(179, 168);
+            this.txtReceivedOTATopicName.Location = new System.Drawing.Point(205, 194);
             this.txtReceivedOTATopicName.Name = "txtReceivedOTATopicName";
             this.txtReceivedOTATopicName.ReadOnly = true;
-            this.txtReceivedOTATopicName.Size = new System.Drawing.Size(491, 23);
+            this.txtReceivedOTATopicName.Size = new System.Drawing.Size(561, 25);
             this.txtReceivedOTATopicName.TabIndex = 24;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 172);
+            this.label4.Location = new System.Drawing.Point(25, 199);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 14);
+            this.label4.Size = new System.Drawing.Size(165, 15);
             this.label4.TabIndex = 25;
             this.label4.Text = "Received OTA Topic Name";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 233);
+            this.label6.Location = new System.Drawing.Point(24, 272);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 14);
+            this.label6.Size = new System.Drawing.Size(166, 15);
             this.label6.TabIndex = 27;
             this.label6.Text = "Response OTA Topic Name";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 204);
+            this.label7.Location = new System.Drawing.Point(6, 235);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(178, 14);
+            this.label7.Size = new System.Drawing.Size(184, 15);
             this.label7.TabIndex = 26;
             this.label7.Text = "Response Jefferies Topic Name";
             // 
@@ -173,37 +173,37 @@
             // 
             this.txtResponseJefferiesTopicName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtResponseJefferiesTopicName.Location = new System.Drawing.Point(179, 198);
+            this.txtResponseJefferiesTopicName.Location = new System.Drawing.Point(205, 228);
             this.txtResponseJefferiesTopicName.Name = "txtResponseJefferiesTopicName";
             this.txtResponseJefferiesTopicName.ReadOnly = true;
-            this.txtResponseJefferiesTopicName.Size = new System.Drawing.Size(491, 23);
+            this.txtResponseJefferiesTopicName.Size = new System.Drawing.Size(561, 25);
             this.txtResponseJefferiesTopicName.TabIndex = 28;
             // 
             // txtResponseOTATopicName
             // 
             this.txtResponseOTATopicName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtResponseOTATopicName.Location = new System.Drawing.Point(179, 230);
+            this.txtResponseOTATopicName.Location = new System.Drawing.Point(205, 266);
             this.txtResponseOTATopicName.Name = "txtResponseOTATopicName";
             this.txtResponseOTATopicName.ReadOnly = true;
-            this.txtResponseOTATopicName.Size = new System.Drawing.Size(491, 23);
+            this.txtResponseOTATopicName.Size = new System.Drawing.Size(561, 25);
             this.txtResponseOTATopicName.TabIndex = 29;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Location = new System.Drawing.Point(33, 4);
+            this.groupBox3.Location = new System.Drawing.Point(38, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(425, 43);
+            this.groupBox3.Size = new System.Drawing.Size(486, 49);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "說明：";
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(9, 20);
+            this.label9.Location = new System.Drawing.Point(10, 24);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(408, 20);
+            this.label9.Size = new System.Drawing.Size(466, 24);
             this.label9.TabIndex = 0;
             this.label9.Text = "對於表單EMSSender來說,此程式為Server端的接收及處理回應程式;";
             // 
@@ -216,9 +216,9 @@
             this.columnHeader2});
             this.LvSystemInfo.FullRowSelect = true;
             this.LvSystemInfo.GridLines = true;
-            this.LvSystemInfo.Location = new System.Drawing.Point(5, 302);
+            this.LvSystemInfo.Location = new System.Drawing.Point(6, 348);
             this.LvSystemInfo.Name = "LvSystemInfo";
-            this.LvSystemInfo.Size = new System.Drawing.Size(666, 262);
+            this.LvSystemInfo.Size = new System.Drawing.Size(761, 302);
             this.LvSystemInfo.TabIndex = 31;
             this.LvSystemInfo.UseCompatibleStateImageBehavior = false;
             this.LvSystemInfo.View = System.Windows.Forms.View.Details;
@@ -237,17 +237,17 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(5, 272);
+            this.label8.Location = new System.Drawing.Point(6, 327);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 14);
+            this.label8.Size = new System.Drawing.Size(111, 15);
             this.label8.TabIndex = 32;
             this.label8.Text = "Work Thread Info";
             // 
             // btnClearInfo
             // 
-            this.btnClearInfo.Location = new System.Drawing.Point(117, 262);
+            this.btnClearInfo.Location = new System.Drawing.Point(134, 302);
             this.btnClearInfo.Name = "btnClearInfo";
-            this.btnClearInfo.Size = new System.Drawing.Size(87, 25);
+            this.btnClearInfo.Size = new System.Drawing.Size(99, 29);
             this.btnClearInfo.TabIndex = 33;
             this.btnClearInfo.Text = "清除資訊";
             this.btnClearInfo.UseVisualStyleBackColor = true;
@@ -256,34 +256,34 @@
             // lblJEFFUnhandledCount
             // 
             this.lblJEFFUnhandledCount.AutoSize = true;
-            this.lblJEFFUnhandledCount.Location = new System.Drawing.Point(366, 282);
+            this.lblJEFFUnhandledCount.Location = new System.Drawing.Point(418, 326);
             this.lblJEFFUnhandledCount.Name = "lblJEFFUnhandledCount";
-            this.lblJEFFUnhandledCount.Size = new System.Drawing.Size(0, 14);
+            this.lblJEFFUnhandledCount.Size = new System.Drawing.Size(0, 15);
             this.lblJEFFUnhandledCount.TabIndex = 41;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(227, 282);
+            this.label10.Location = new System.Drawing.Point(259, 326);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(136, 14);
+            this.label10.Size = new System.Drawing.Size(146, 15);
             this.label10.TabIndex = 40;
             this.label10.Text = "JEFF待處理資料筆數:";
             // 
             // lblOTAUnhandledCount
             // 
             this.lblOTAUnhandledCount.AutoSize = true;
-            this.lblOTAUnhandledCount.Location = new System.Drawing.Point(366, 262);
+            this.lblOTAUnhandledCount.Location = new System.Drawing.Point(418, 302);
             this.lblOTAUnhandledCount.Name = "lblOTAUnhandledCount";
-            this.lblOTAUnhandledCount.Size = new System.Drawing.Size(0, 14);
+            this.lblOTAUnhandledCount.Size = new System.Drawing.Size(0, 15);
             this.lblOTAUnhandledCount.TabIndex = 39;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(227, 262);
+            this.label11.Location = new System.Drawing.Point(259, 302);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(135, 14);
+            this.label11.Size = new System.Drawing.Size(145, 15);
             this.label11.TabIndex = 38;
             this.label11.Text = "OTA待處理資料筆數:";
             // 
@@ -293,18 +293,18 @@
             this.cboDestinationFeature.Items.AddRange(new object[] {
             "Topic",
             "Queue"});
-            this.cboDestinationFeature.Location = new System.Drawing.Point(179, 111);
+            this.cboDestinationFeature.Location = new System.Drawing.Point(205, 128);
             this.cboDestinationFeature.Name = "cboDestinationFeature";
-            this.cboDestinationFeature.Size = new System.Drawing.Size(124, 21);
+            this.cboDestinationFeature.Size = new System.Drawing.Size(141, 23);
             this.cboDestinationFeature.TabIndex = 43;
             this.cboDestinationFeature.SelectedIndexChanged += new System.EventHandler(this.cboDestinationFeature_SelectedIndexChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(99, 113);
+            this.label12.Location = new System.Drawing.Point(110, 132);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 14);
+            this.label12.Size = new System.Drawing.Size(80, 15);
             this.label12.TabIndex = 42;
             this.label12.Text = "Queue/Topic";
             // 
@@ -314,44 +314,44 @@
             this.cboFormat.Items.AddRange(new object[] {
             "Json",
             "Fix"});
-            this.cboFormat.Location = new System.Drawing.Point(180, 83);
+            this.cboFormat.Location = new System.Drawing.Point(206, 95);
             this.cboFormat.Margin = new System.Windows.Forms.Padding(2);
             this.cboFormat.Name = "cboFormat";
-            this.cboFormat.Size = new System.Drawing.Size(73, 21);
+            this.cboFormat.Size = new System.Drawing.Size(83, 23);
             this.cboFormat.TabIndex = 45;
             this.cboFormat.SelectedIndexChanged += new System.EventHandler(this.cboFormat_SelectedIndexChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(80, 84);
+            this.label13.Location = new System.Drawing.Point(90, 100);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(96, 14);
+            this.label13.Size = new System.Drawing.Size(100, 15);
             this.label13.TabIndex = 44;
             this.label13.Text = "Message Format";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(526, 268);
+            this.label14.Location = new System.Drawing.Point(601, 310);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(63, 14);
+            this.label14.Size = new System.Drawing.Size(67, 15);
             this.label14.TabIndex = 51;
             this.label14.Text = "處理筆數";
             // 
             // txtMessageCount
             // 
-            this.txtMessageCount.Location = new System.Drawing.Point(595, 264);
+            this.txtMessageCount.Location = new System.Drawing.Point(680, 304);
             this.txtMessageCount.Name = "txtMessageCount";
             this.txtMessageCount.ReadOnly = true;
-            this.txtMessageCount.Size = new System.Drawing.Size(75, 23);
+            this.txtMessageCount.Size = new System.Drawing.Size(85, 25);
             this.txtMessageCount.TabIndex = 50;
             // 
             // EMSServer_Receive_Response_Test
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 476);
+            this.ClientSize = new System.Drawing.Size(768, 550);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtMessageCount);
             this.Controls.Add(this.cboFormat);
