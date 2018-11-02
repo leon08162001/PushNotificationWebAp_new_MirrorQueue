@@ -204,10 +204,12 @@ namespace MQDemoSubscriber
             if (cboFormat.SelectedIndex == 0)
             {
                 (JefferiesExcuReportMQ as BatchMQAdapter).DataType = typeof(loanApplication_customer);
-                //(JefferiesExcuReportMQ as BatchMQAdapter).DataType = typeof(SignMessage);
                 JefferiesExcuReportMQ.ReceiverDBAction = DBAction.Query;
                 TopicController.HandleTopicForJson<loanApplication_customer>(this, JefferiesExcuReportMQ);
+                //Receive Certificate Sign Data test begin
+                //(JefferiesExcuReportMQ as BatchMQAdapter).DataType = typeof(SignMessage);
                 //TopicController.HandleTopicForJson<SignMessage>(this, JefferiesExcuReportMQ);
+                //Receive Certificate Sign Data test end
 
                 (OTAExportMQ as BatchMQAdapter).DataType = typeof(loanApplication_customer);
                 OTAExportMQ.ReceiverDBAction = DBAction.Query;
