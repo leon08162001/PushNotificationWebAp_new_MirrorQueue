@@ -20,15 +20,15 @@ namespace MQDemoProducer
         {
             if (CboTestCase.SelectedIndex == 0)
             {
-                //this.Hide();
-                //TibcoSender TibcoSender = new TibcoSender(this);
-                //TibcoSender.Show();
-            }
-            else if (CboTestCase.SelectedIndex == 1)
-            {
                 this.Hide();
                 MQSender MQSender = new MQSender(this);
                 MQSender.Show();
+            }
+            else if (CboTestCase.SelectedIndex == 1)
+            {
+                //this.Hide();
+                //TibcoSender TibcoSender = new TibcoSender(this);
+                //TibcoSender.Show();
             }
             else if (CboTestCase.SelectedIndex == 2)
             {

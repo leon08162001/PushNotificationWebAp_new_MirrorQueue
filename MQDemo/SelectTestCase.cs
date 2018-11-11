@@ -20,15 +20,15 @@ namespace MQDemoSubscriber
         {
             if (CboTestCase.SelectedIndex == 0)
             {
-                //this.Hide();
-                //TibcoServer_Receive_Response_Test TibcoServer = new TibcoServer_Receive_Response_Test(this);
-                //TibcoServer.Show();
-            }
-            else if (CboTestCase.SelectedIndex == 1)
-            {
                 this.Hide();
                 MQServer_Receive_Response_Test MQServer = new MQServer_Receive_Response_Test(this);
                 MQServer.Show();
+            }
+            else if (CboTestCase.SelectedIndex == 1)
+            {
+                //this.Hide();
+                //TibcoServer_Receive_Response_Test TibcoServer = new TibcoServer_Receive_Response_Test(this);
+                //TibcoServer.Show();
             }
             else if (CboTestCase.SelectedIndex == 2)
             {

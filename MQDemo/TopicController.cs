@@ -234,7 +234,7 @@ namespace MQDemoSubscriber
                                 }
 
                                 //對android傳來的簽章資料驗章且分散資料庫儲存 begin
-                                CertificateDataVerifySaveDBTest<T>(MessageDT);
+                                //CertificateDataVerifySaveDBTest<T>(MessageDT);
                                 //if (typeof(T) == typeof(SignMessage))
                                 //{
                                 //    List<SignMessage> SignMessage = JsonConvert.DeserializeObject<List<SignMessage>>(JSONresult, settings);

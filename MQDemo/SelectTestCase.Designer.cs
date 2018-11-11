@@ -36,9 +36,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 28);
+            this.label1.Location = new System.Drawing.Point(16, 35);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 12);
+            this.label1.Size = new System.Drawing.Size(97, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "選擇測試案例";
             // 
@@ -46,20 +47,22 @@
             // 
             this.CboTestCase.FormattingEnabled = true;
             this.CboTestCase.Items.AddRange(new object[] {
-            "Tibco Server",
-            "MQ Server",
-            "EMS Server",
+            "ActiveMQ Server",
+            "TibcoRV Server",
+            "TibcoEMS Server",
             "MQ Client"});
-            this.CboTestCase.Location = new System.Drawing.Point(93, 23);
+            this.CboTestCase.Location = new System.Drawing.Point(124, 29);
+            this.CboTestCase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CboTestCase.Name = "CboTestCase";
-            this.CboTestCase.Size = new System.Drawing.Size(121, 20);
+            this.CboTestCase.Size = new System.Drawing.Size(160, 23);
             this.CboTestCase.TabIndex = 1;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(104, 49);
+            this.btnOK.Location = new System.Drawing.Point(139, 61);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(100, 29);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -67,12 +70,13 @@
             // 
             // SelectTestCase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(232, 83);
+            this.ClientSize = new System.Drawing.Size(309, 104);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.CboTestCase);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SelectTestCase";
             this.Text = "SelectTestCase";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SelectTestCase_FormClosed);
