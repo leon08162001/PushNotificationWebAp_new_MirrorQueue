@@ -216,8 +216,8 @@ namespace MQDemoSubscriber
                 TopicController.HandleTopic(this, OTAExportEMS);
             }
             //持久訂閱者
-            JefferiesExcuReportEMS.Start(true, "JefferiesDurableConsumer");
-            OTAExportEMS.Start(true, "OTADurableConsumer");
+            JefferiesExcuReportEMS.Start("JefferiesDurableConsumer", true);
+            OTAExportEMS.Start("OTADurableConsumer", true);
             //非持久訂閱者
             //JefferiesExcuReportEMS.Start();
             //OTAExportEMS.Start();

@@ -222,7 +222,11 @@ namespace Common.LinkLayer
             get { return _IsEventInUIThread; }
             set { _IsEventInUIThread = value; }
         }
-
+        public bool IsDurableConsumer
+        {
+            get { return _IsDurableConsumer; }
+            set { _IsDurableConsumer = value; }
+        }
         /// <summary>
         /// 心跳訊息間隔(秒)
         /// </summary>
@@ -275,7 +279,7 @@ namespace Common.LinkLayer
             _PassWord = Pwd;
         }
 
-        public void Start(bool IsDurableConsumer = false, string ClientID = "")
+        public void Start(string ClientID = "", bool IsDurableConsumer = false)
         {
             string SingleUrl = "";
             string Urls = "";
@@ -411,12 +415,12 @@ namespace Common.LinkLayer
             }
         }
 
-        public void Restart(bool IsDurableConsumer = false, string ClientID = "")
+        public void Restart(string ClientID = "", bool IsDurableConsumer = false)
         {
             try
             {
                 Close();
-                Start(IsDurableConsumer, ClientID);
+                Start(ClientID, IsDurableConsumer);
                 //InitialHeartBeat();
             }
             catch (Exception ex)
@@ -687,26 +691,26 @@ namespace Common.LinkLayer
                     }
                     if (_DestinationFeature == DestinationFeature.Topic)
                     {
-                        if (_Selector.Equals(""))
+                        if (_IsDurableConsumer)
                         {
-                            if (_IsDurableConsumer)
+                            if (_Selector.Equals(""))
                             {
-                                _Consumer = _Session.CreateDurableSubscriber(_Session.CreateTopic(ListenName), _Connection.ClientID, null, false);
+                                _Consumer = _Session.CreateDurableSubscriber(_Session.CreateTopic(_ListenName), _Connection.ClientID, null, false);
                             }
                             else
                             {
-                                _Consumer = _Session.CreateConsumer(_Session.CreateTopic(ListenName));
+                                _Consumer = _Session.CreateDurableSubscriber(_Session.CreateTopic(_ListenName), _Connection.ClientID, _Selector, false);
                             }
                         }
                         else
                         {
-                            if (_IsDurableConsumer)
+                            if (_Selector.Equals(""))
                             {
-                                _Consumer = _Session.CreateDurableSubscriber(_Session.CreateTopic(ListenName), _Connection.ClientID, _Selector, false);
+                                _Consumer = _Session.CreateConsumer(_Session.CreateTopic(_ListenName));
                             }
                             else
                             {
-                                _Consumer = _Session.CreateConsumer(_Session.CreateTopic(ListenName), _Selector);
+                                _Consumer = _Session.CreateConsumer(_Session.CreateTopic(_ListenName), _Selector);
                             }
                         }
                         _Consumer.MessageHandler += new EMSMessageHandler(listener_messageReceivedEventHandler);
@@ -901,22 +905,22 @@ namespace Common.LinkLayer
                 {
                     if (_DestinationFeature == DestinationFeature.Topic)
                     {
-                        if (_Selector.Equals(""))
+                        if (_IsDurableConsumer)
                         {
-                            if (_IsDurableConsumer)
+                            if (_Selector.Equals(""))
                             {
                                 _Consumer = _Session.CreateDurableSubscriber(_Session.CreateTopic(_ListenName), _Connection.ClientID, null, false);
                             }
                             else
                             {
-                                _Consumer = _Session.CreateConsumer(_Session.CreateTopic(_ListenName));
+                                _Consumer = _Session.CreateDurableSubscriber(_Session.CreateTopic(_ListenName), _Connection.ClientID, _Selector, false);
                             }
                         }
                         else
                         {
-                            if (_IsDurableConsumer)
+                            if (_Selector.Equals(""))
                             {
-                                _Consumer = _Session.CreateDurableSubscriber(_Session.CreateTopic(_ListenName), _Connection.ClientID, _Selector, false);
+                                _Consumer = _Session.CreateConsumer(_Session.CreateTopic(_ListenName));
                             }
                             else
                             {

@@ -67,7 +67,7 @@ namespace MQDemoProducer
                 JefferiesExcuReportEMS.SendName = config.jefferiesExcuReport_Sender_Topic;
                 JefferiesExcuReportEMS.UserName = config.EMSUserID;
                 JefferiesExcuReportEMS.PassWord = config.EMSPwd;
-
+                JefferiesExcuReportEMS.IsDurableConsumer = true;
 
                 OTAExportEMS.Uri = config.EMS_network + ":" + config.EMS_service;
                 OTAExportEMS.DestinationFeature = cboDestinationFeature.SelectedIndex == 0 ? DestinationFeature.Topic : DestinationFeature.Queue;
@@ -75,6 +75,7 @@ namespace MQDemoProducer
                 OTAExportEMS.SendName = config.otaExport_Sender_Topic;
                 OTAExportEMS.UserName = config.EMSUserID;
                 OTAExportEMS.PassWord = config.EMSPwd;
+                OTAExportEMS.IsDurableConsumer = true;
             }
             catch (Exception ex)
             {
@@ -102,8 +103,33 @@ namespace MQDemoProducer
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            JefferiesExcuReportEMS.Start();
-            OTAExportEMS.Start();
+            //JefferiesExcuReportEMS.Start();
+            //OTAExportEMS.Start();
+            if (cboDestinationFeature.SelectedIndex == 0)
+            {
+                if (JefferiesExcuReportEMS.IsDurableConsumer)
+                {
+                    JefferiesExcuReportEMS.Start("Jefferies", true);
+                }
+                else
+                {
+                    JefferiesExcuReportEMS.Start();
+                }
+                if (OTAExportEMS.IsDurableConsumer)
+                {
+                    OTAExportEMS.Start("OTA", true);
+                }
+                else
+                {
+                    OTAExportEMS.Start();
+                }
+            }
+            //Queue
+            else if (cboDestinationFeature.SelectedIndex == 1)
+            {
+                JefferiesExcuReportEMS.Start();
+                OTAExportEMS.Start();
+            }
         }
 
         private void btn_Send_Click(object sender, EventArgs e)
@@ -241,11 +267,13 @@ namespace MQDemoProducer
                         MultiEMSMessage.Add(MessageFields);
                     }
                 }
-                JefferiesExcuReportEMS.SendEMSMessage("710", MultiEMSMessage, 20, 25);
+                //JefferiesExcuReportEMS.SendEMSMessage("710", MultiEMSMessage, 20, 25);
+                JefferiesExcuReportEMS.SendEMSMessage("710", MultiEMSMessage);
                 iMessageCount += 1;
                 txtMessageCount.Text = txtMessageCount.Text.Trim() == "" ? "1" : (Convert.ToInt32(txtMessageCount.Text.Trim()) + 1).ToString();
                 //if (log.IsInfoEnabled) log.InfoFormat("Send JefferiesExcuReport Message from EMSSender(Count:{0})", MessageNums.Value);
-                OTAExportEMS.SendEMSMessage("710", MultiEMSMessage, 20, 25);
+                //OTAExportEMS.SendEMSMessage("710", MultiEMSMessage, 20, 25);
+                OTAExportEMS.SendEMSMessage("710", MultiEMSMessage);
                 iMessageCount += 1;
                 txtMessageCount.Text = txtMessageCount.Text.Trim() == "" ? "1" : (Convert.ToInt32(txtMessageCount.Text.Trim()) + 1).ToString();
                 //if (log.IsInfoEnabled) log.InfoFormat("Send OTAExport Message from EMSSender(Count:{0})", MessageNums.Value);
@@ -273,11 +301,13 @@ namespace MQDemoProducer
                     }
                     MultiEMSMessage.Add(MessageFields);
                 }
-                JefferiesExcuReportEMS.SendEMSMessage("710", MultiEMSMessage, 30, 25);
+                //JefferiesExcuReportEMS.SendEMSMessage("710", MultiEMSMessage, 30, 25);
+                JefferiesExcuReportEMS.SendEMSMessage("710", MultiEMSMessage);
                 iMessageCount += 1;
                 txtMessageCount.Text = txtMessageCount.Text.Trim() == "" ? "1" : (Convert.ToInt32(txtMessageCount.Text.Trim()) + 1).ToString();
                 //if (log.IsInfoEnabled) log.InfoFormat("Send JefferiesExcuReport Message from EMSSender(Count:{0})", MessageNums.Value);
-                OTAExportEMS.SendEMSMessage("710", MultiEMSMessage, 30, 25);
+                //OTAExportEMS.SendEMSMessage("710", MultiEMSMessage, 30, 25);
+                OTAExportEMS.SendEMSMessage("710", MultiEMSMessage);
                 iMessageCount += 1;
                 txtMessageCount.Text = txtMessageCount.Text.Trim() == "" ? "1" : (Convert.ToInt32(txtMessageCount.Text.Trim()) + 1).ToString();
                 //if (log.IsInfoEnabled) log.InfoFormat("Send OTAExport Message from EMSSender(Count:{0})", MessageNums.Value);
@@ -319,7 +349,8 @@ namespace MQDemoProducer
                         }
                         MultiEMSMessage.Add(MqMessage);
                     }
-                    JefferiesExcuReportEMS.SendEMSMessage("710", MultiEMSMessage, 3, 25);
+                    //JefferiesExcuReportEMS.SendEMSMessage("710", MultiEMSMessage, 3, 25);
+                    JefferiesExcuReportEMS.SendEMSMessage("710", MultiEMSMessage);
                     txtMessageCount.Text = txtMessageCount.Text.Trim() == "" ? MultiEMSMessage.Count.ToString() : (Convert.ToInt32(txtMessageCount.Text) + MultiEMSMessage.Count).ToString();
                     Application.DoEvents();
                     MultiEMSMessage.Clear();
@@ -346,7 +377,8 @@ namespace MQDemoProducer
                         MessageField.Value = DicMap[Dic];
                         MqMessage.Add(MessageField);
                     }
-                    JefferiesExcuReportEMS.SendEMSMessage("710", MqMessage, 18, 25);
+                    //JefferiesExcuReportEMS.SendEMSMessage("710", MqMessage, 18, 25);
+                    JefferiesExcuReportEMS.SendEMSMessage("710", MqMessage);
                     txtMessageCount.Text = (i + 1).ToString();
                     Application.DoEvents();
                     //if (log.IsInfoEnabled) log.Info("Send JefferiesExcuReport Message from EMSSender");

@@ -21,6 +21,10 @@ namespace Common.LinkLayer
         /// </summary>
         bool IsEventInUIThread { get; set; }
         /// <summary>
+        /// 是否是持久消費者
+        /// </summary>
+        bool IsDurableConsumer { get; set; }
+        /// <summary>
         /// 監聽的主題
         /// </summary>
         string ListenName { get; set; }
@@ -79,10 +83,10 @@ namespace Common.LinkLayer
 
         TopicTypeHandler Handler { get; set; }
 
-        void Start(bool IsDurableConsumer = false, string ClientID = "");
+        void Start(string ClientID = "", bool IsDurableConsumer = false);
         void Close();
         void processEMSMessage(TIBCO.EMS.Message message);
-        void Restart(bool IsDurableConsumer = false, string ClientID = "");
+        void Restart(string ClientID = "", bool IsDurableConsumer = false);
         void RemoveAllEvents();
         bool SendEMSMessage(string RequestTag, System.Collections.Generic.List<MessageField> SingleEMSMessage, int DelayedPerWhenNumber = 0, int DelayedMillisecond = 0);
         bool SendEMSMessage(string RequestTag, System.Collections.Generic.List<System.Collections.Generic.List<MessageField>> MultiEMSMessage, int DelayedPerWhenNumber = 0, int DelayedMillisecond = 0);
