@@ -22,7 +22,7 @@ namespace Common.LinkLayer
             //{
             _Factory = new ConnectionFactory(Util.GetEMSFailOverConnString(serverUrl));
             _Factory.SetReconnAttemptCount(1200);   // 1200retries
-            _Factory.SetReconnAttemptDelay(30000);  // 30seconds
+            _Factory.SetReconnAttemptDelay(5000);  // 5seconds
             _Factory.SetReconnAttemptTimeout(5000); // 5seconds
             if (IsDurableConsumer && !string.IsNullOrEmpty(ClientID)) _Factory.SetClientID(ClientID);
             try
