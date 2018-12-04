@@ -25,6 +25,10 @@ namespace Common.LinkLayer
         /// </summary>
         bool IsDurableConsumer { get; set; }
         /// <summary>
+        /// 是否使用ssl
+        /// </summary>
+        bool UseSSL { get; set; }
+        /// <summary>
         /// 監聽的主題
         /// </summary>
         string ListenName { get; set; }

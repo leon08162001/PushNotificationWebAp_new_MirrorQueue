@@ -81,6 +81,7 @@ namespace Common.LinkLayer
         protected TopicTypeHandler _Handler = null;
 
         protected bool _IsEventInUIThread = false;             //觸發事件時是否回到UI Thread預設為false
+        protected bool _UseSSL = false;
 
         protected Timer HeartBeatTimer;
         protected int _HeartBeatInterval = 60;
@@ -227,6 +228,11 @@ namespace Common.LinkLayer
             get { return _IsDurableConsumer; }
             set { _IsDurableConsumer = value; }
         }
+        public bool UseSSL
+        {
+            get { return _UseSSL; }
+            set { _UseSSL = value; }
+        }
         /// <summary>
         /// 心跳訊息間隔(秒)
         /// </summary>
@@ -285,14 +291,20 @@ namespace Common.LinkLayer
             string Urls = "";
             _IsDurableConsumer = IsDurableConsumer;
             _ClientID = ClientID;
-            if (_Uri.IndexOf(",") == -1)
+            string urls;
+            string ports;
+            urls = _Uri.Split(new char[] { ':' })[0];
+            ports = _Uri.Split(new char[] { ':' })[1];
+            //代表只有1個IP
+            if (urls.IndexOf(",") == -1)
             {
-                SingleUrl = _Uri;
+                SingleUrl = urls;
             }
+            //代表多個IP
             else
             {
-                SingleUrl = _Uri.Split(new char[] { ',' })[0];
-                Urls = _Uri;
+                SingleUrl = urls.Split(new char[] { ',' })[0];
+                Urls = urls;
             }
             if (!SingleUrl.Equals("") && SingleUrl.IndexOf(":") > -1)
             {
@@ -312,11 +324,11 @@ namespace Common.LinkLayer
                 {
                     if (Urls.Equals(""))
                     {
-                        EMSSharedConnection.Open(SingleUrl, _UserName, _PassWord, _IsDurableConsumer, _ClientID);
+                        EMSSharedConnection.Open(SingleUrl, ports, _UserName, _PassWord, _UseSSL, _IsDurableConsumer, _ClientID);
                     }
                     else
                     {
-                        EMSSharedConnection.Open(Urls, _UserName, _PassWord, _IsDurableConsumer, _ClientID);
+                        EMSSharedConnection.Open(Urls, ports, _UserName, _PassWord, _UseSSL, _IsDurableConsumer, _ClientID);
                     }
                     _Session = EMSSharedConnection.GetConnection().CreateSession(false, SessionMode.AutoAcknowledge);
                     _Connection = EMSSharedConnection.GetConnection();
@@ -747,6 +759,7 @@ namespace Common.LinkLayer
                     //}
                     if (_DestinationFeature == DestinationFeature.Topic)
                     {
+                        Destination Dest = _Session.CreateTopic(SendName);
                         _Producer = _Session.CreateProducer(_Session.CreateTopic(SendName));
                     }
                     else if (_DestinationFeature == DestinationFeature.Queue)

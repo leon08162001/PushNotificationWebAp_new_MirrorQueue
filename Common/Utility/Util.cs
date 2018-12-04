@@ -280,6 +280,84 @@ namespace Common.Utility
                     FailOverConnString.Remove(FailOverConnString.Length - 1, 1);
                 }
             }
+            //return FailOverConnString.ToString();
+            return "tcp://192.168.43.248:7222,tcp://192.168.43.248:7224";
+        }
+        public static string GetEMSFailOverConnString(string Urls, string Ports, bool useSSL = false)
+        {
+            StringBuilder FailOverConnString = new StringBuilder("");
+            //代表只有1個IP
+            if (Urls.IndexOf(",") == -1)
+            {
+                string port;
+                //代表只有1個port
+                if (Ports.IndexOf(",") == -1)
+                {
+                    port = Ports;
+                    if (useSSL)
+                    {
+                        FailOverConnString.Append("ssl://" + Urls + ":" + port);
+                    }
+                    else
+                    {
+                        FailOverConnString.Append("tcp://" + Urls + ":" + port);
+                    }
+                }
+                //代表多個port
+                else
+                {
+                    int portsCount = Ports.Split(new char[] { ',' }).Length;
+                    for (int i = 0; i < portsCount; i++)
+                    {
+                        if (useSSL)
+                        {
+                            FailOverConnString.Append("ssl://" + Urls + ":" + Ports.Split(new char[] { ',' })[i]);
+                            FailOverConnString.Append(",");
+                        }
+                        else
+                        {
+                            FailOverConnString.Append("tcp://" + Urls + ":" + Ports.Split(new char[] { ',' })[i] + ",");
+                        }
+                    }
+                    if (FailOverConnString.Length > 0)
+                    {
+                        FailOverConnString.Remove(FailOverConnString.Length - 1, 1);
+                    }
+                }
+            }
+            //代表多個IP
+            else
+            {
+                string sPort = "";
+                List<string> urls = Urls.Split(new char[] { ',' }).ToList<string>();
+                int i = 0;
+                foreach (string url in urls)
+                {
+                    //代表只有1個port
+                    if (Ports.IndexOf(",") == -1)
+                    {
+                        sPort = string.IsNullOrEmpty(Ports) ? "7222" : Ports;
+                    }
+                    else
+                    {
+                        sPort = Ports.Split(new char[] { ',' })[i];
+                        i++;
+                    }
+                    if (useSSL)
+                    {
+                        FailOverConnString.Append("ssl://" + url + ":" + sPort);
+                        FailOverConnString.Append(",");
+                    }
+                    else
+                    {
+                        FailOverConnString.Append("tcp://" + url + ":" + sPort + ",");
+                    }
+                }
+                if (FailOverConnString.Length > 0)
+                {
+                    FailOverConnString.Remove(FailOverConnString.Length - 1, 1);
+                }
+            }
             return FailOverConnString.ToString();
         }
 

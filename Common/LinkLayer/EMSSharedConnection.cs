@@ -16,14 +16,14 @@ namespace Common.LinkLayer
         {
             return _Connection;
         }
-        public static void Open(string serverUrl, string userName, string passWord, bool IsDurableConsumer = false, string ClientID = "")
+        public static void Open(string serverUrl, string serverPort, string userName, string passWord, bool useSSL = false, bool IsDurableConsumer = false, string ClientID = "")
         {
             //if (_Connection == null)
             //{
-            _Factory = new ConnectionFactory(Util.GetEMSFailOverConnString(serverUrl));
+            _Factory = new ConnectionFactory(Util.GetEMSFailOverConnString(serverUrl, serverPort, useSSL));
             _Factory.SetReconnAttemptCount(1200);   // 1200retries
             _Factory.SetReconnAttemptDelay(5000);  // 5seconds
-            _Factory.SetReconnAttemptTimeout(20000); // 20seconds
+            _Factory.SetReconnAttemptTimeout(20000); // 5seconds
             if (IsDurableConsumer && !string.IsNullOrEmpty(ClientID)) _Factory.SetClientID(ClientID);
             try
             {

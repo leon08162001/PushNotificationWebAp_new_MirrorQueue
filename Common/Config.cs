@@ -31,6 +31,7 @@ namespace Common
         public string EMSPwd;
         public string EMS_service;
         public string EMS_network;
+        public bool EMS_useSSL = false;
         public string EMSReceivedMessageReservedSeconds = "30";
 
         //Y77
@@ -153,6 +154,9 @@ namespace Common
                                 break;
                             case "EMS_NETWORK":
                                 EMS_network = config_value;
+                                break;
+                            case "EMS_USESSL":
+                                EMS_useSSL = Convert.ToBoolean(config_value);
                                 break;
                             case "EMSRECEIVEDMESSAGERESERVEDSECONDS":
                             {

@@ -53,8 +53,8 @@ namespace MQDemoSubscriber
                                 {
                                     DataRow dr = MessageDT.Rows[0];
                                     string FielName = dr["filename"].ToString();
-                                    File.Delete(@"D:\temp\" + FielName);
-                                    File.WriteAllBytes(@"D:\temp\"+ FielName, (dr["content"] as byte[]));
+                                    File.Delete(System.Configuration.ConfigurationManager.AppSettings["ReceivedFileLocation"].ToString() + FielName);
+                                    File.WriteAllBytes(System.Configuration.ConfigurationManager.AppSettings["ReceivedFileLocation"].ToString() + FielName, (dr["content"] as byte[]));
                                 }
                             }
                             else
@@ -97,8 +97,8 @@ namespace MQDemoSubscriber
                                 {
                                     DataRow dr = MessageDT.Rows[0];
                                     string FielName = dr["filename"].ToString();
-                                    File.Delete(@"D:\temp\" + FielName);
-                                    File.WriteAllBytes(@"D:\temp\" + FielName, (dr["content"] as byte[]));
+                                    File.Delete(System.Configuration.ConfigurationManager.AppSettings["ReceivedFileLocation"].ToString() + FielName);
+                                    File.WriteAllBytes(System.Configuration.ConfigurationManager.AppSettings["ReceivedFileLocation"].ToString() + FielName, (dr["content"] as byte[]));
                                 }
                             }
                             else
@@ -140,8 +140,8 @@ namespace MQDemoSubscriber
                                 {
                                     DataRow dr = MessageDT.Rows[0];
                                     string FileName = dr["filename"].ToString();
-                                    File.Delete(@"D:\temp\" + FileName);
-                                    File.WriteAllBytes(@"D:\temp\" + FileName, (dr["content"] as byte[]));
+                                    File.Delete(System.Configuration.ConfigurationManager.AppSettings["ReceivedFileLocation"].ToString() + FileName);
+                                    File.WriteAllBytes(System.Configuration.ConfigurationManager.AppSettings["ReceivedFileLocation"].ToString() + FileName, (dr["content"] as byte[]));
                                 }
                             }
                             else
@@ -292,8 +292,8 @@ namespace MQDemoSubscriber
                                 {
                                     DataRow dr = MessageDT.Rows[0];
                                     string FielName = dr["filename"].ToString();
-                                    File.Delete(@"D:\temp\" + FielName);
-                                    File.WriteAllBytes(@"D:\temp\" + FielName, (dr["content"] as byte[]));
+                                    File.Delete(System.Configuration.ConfigurationManager.AppSettings["ReceivedFileLocation"].ToString() + FielName);
+                                    File.WriteAllBytes(System.Configuration.ConfigurationManager.AppSettings["ReceivedFileLocation"].ToString() + FielName, (dr["content"] as byte[]));
                                 }
                             }
                             else
