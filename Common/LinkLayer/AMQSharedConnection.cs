@@ -8,6 +8,7 @@ namespace Common.LinkLayer
 {
     public class AMQSharedConnection
     {
+        protected static string s = "S";
         protected static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         protected static IConnectionFactory _Factory = null;
         protected static IConnection _Connection = null;
