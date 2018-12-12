@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MQPushMessageDemo.aspx.cs" Inherits="PushNotificationWebAp.MQPushMessageDemo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MQPushMessageDemo.aspx.cs" Inherits="PushNotificationWebAp.MQPushMessageDemo" ValidateRequest="false" %>
 
 <!DOCTYPE html>
 
