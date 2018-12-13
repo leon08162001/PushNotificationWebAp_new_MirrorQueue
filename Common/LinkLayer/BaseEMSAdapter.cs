@@ -344,11 +344,11 @@ namespace Common.LinkLayer
                     //{
                     if (Urls.Equals(""))
                     {
-                        _Factory = new ConnectionFactory(Util.GetEMSFailOverConnString(SingleUrl));
+                        _Factory = new ConnectionFactory(Util.GetMQFailOverConnString(SingleUrl, ports, _UseSSL));
                     }
                     else
                     {
-                        _Factory = new ConnectionFactory(Util.GetEMSFailOverConnString(Urls));
+                        _Factory = new ConnectionFactory(Util.GetMQFailOverConnString(Urls, ports, _UseSSL));
                     }
                     _Factory.SetReconnAttemptCount(60);     // 60retries
                     _Factory.SetReconnAttemptDelay(30000);  // 30seconds
