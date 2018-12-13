@@ -41,21 +41,35 @@ namespace PushNotificationWebAp
                 if (log.IsErrorEnabled) log.Error(ex.Message, ex);
             }
         }
-
         protected void btnPushMessage_Click(object sender, EventArgs e)
         {
             try
             {
-                OpenEMS();
-                SendData();
-                CloseEMS();
+                JefferiesExcuReportEMS = Session["JefferiesExcuReportEMS"] as IEMSAdapter;
+                if (JefferiesExcuReportEMS == null)
+                {
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "activemqNotAlive", "window.alert('Session Timeout')", true);
+                }
+                else
+                {
+                    //if (JefferiesExcuReportMQ.CheckActiveMQAlive())
+                    //{
+                    OpenEMS();
+                    SendData();
+                    CloseEMS();
+                    Response.Redirect(Request.Url.AbsoluteUri, false);
+                    //}
+                    //else
+                    //{
+                    //    ClientScript.RegisterClientScriptBlock(this.GetType(), "activemqNotAlive", "window.alert('ActiveMQ服務尚未啟動')", true);
+                    //}
+                }
             }
             catch (Exception ex)
             {
                 if (log.IsErrorEnabled) log.Error(ex.Message, ex);
             }
         }
-
         private void BindingUIControl()
         {
             applicationContext = ContextRegistry.GetContext();
@@ -76,6 +90,7 @@ namespace PushNotificationWebAp
             //JefferiesExcuReportEMS.SendName = txtReceiverID.Text.Trim();
             JefferiesExcuReportEMS.UserName = config.EMSUserID;
             JefferiesExcuReportEMS.PassWord = config.EMSPwd;
+            JefferiesExcuReportEMS.UseSSL = config.EMS_useSSL;
             Session["JefferiesExcuReportEMS"] = JefferiesExcuReportEMS;
         }
 

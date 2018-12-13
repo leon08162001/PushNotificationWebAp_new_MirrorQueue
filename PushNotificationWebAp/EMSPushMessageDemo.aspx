@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EMSPushMessageDemo.aspx.cs" Inherits="PushNotificationWebAp.EMSPushMessageDemo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EMSPushMessageDemo.aspx.cs" Inherits="PushNotificationWebAp.EMSPushMessageDemo" ValidateRequest="false" %>
 
 <!DOCTYPE html>
 
