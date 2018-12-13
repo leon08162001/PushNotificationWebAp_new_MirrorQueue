@@ -759,7 +759,6 @@ namespace Common.LinkLayer
                     //}
                     if (_DestinationFeature == DestinationFeature.Topic)
                     {
-                        Destination Dest = _Session.CreateTopic(SendName);
                         _Producer = _Session.CreateProducer(_Session.CreateTopic(SendName));
                     }
                     else if (_DestinationFeature == DestinationFeature.Queue)
