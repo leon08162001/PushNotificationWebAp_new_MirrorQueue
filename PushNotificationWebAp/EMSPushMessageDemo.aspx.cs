@@ -102,7 +102,7 @@ namespace PushNotificationWebAp
             for (int h = 0; h < len; h++)
             {
                 //若在Start()後設定SendName,必須呼叫ReStartSender才有效;
-                JefferiesExcuReportEMS.SendName = sReceiverID.Split(new char[] { ';' })[h];
+                JefferiesExcuReportEMS.SendName = "messageclient." + sReceiverID.Split(new char[] { ';' })[h];
                 JefferiesExcuReportEMS.ReStartSender(JefferiesExcuReportEMS.SendName);
                 //後送實際的資料列
                 for (int i = 0; i < Convert.ToInt32(txtMessageNums.Text); i++)
