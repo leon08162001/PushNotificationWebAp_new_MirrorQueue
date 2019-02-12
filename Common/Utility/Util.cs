@@ -281,7 +281,7 @@ namespace Common.Utility
                 }
             }
             //return FailOverConnString.ToString();
-            return "tcp://192.168.43.114:7222,tcp://192.168.43.114:7224";
+            return "tcp://192.168.43.127:7222,tcp://192.168.43.127:7224";
         }
         public static string GetEMSFailOverConnString(string Urls, string Ports, bool useSSL = false)
         {
