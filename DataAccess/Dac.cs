@@ -1,12 +1,13 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Configuration;
+﻿using System;
 using System.Data;
-using System.Data.Common;
-//using Oracle.ManagedDataAccess.Client;
-using System.Data.OleDb;
-using System.Data.OracleClient;
 using System.Data.SqlClient;
+//using System.Data.OracleClient;
+using Oracle.ManagedDataAccess.Client;
+using System.Data.OleDb;
+using MySql.Data.MySqlClient;
+using System.Data.Odbc;
+using System.Data.Common;
+using System.Configuration;
 
 /// <summary>
 /// 資料存取控制元件
@@ -61,6 +62,7 @@ namespace DataAccess.DB
         public Dac(dbtype dbtype, string ConnectionConfigName)
         {
             SetDBType(dbtype);
+            Datatype = dbtype;
             this._ConnectionConfigName = ConnectionConfigName;
         }
 
@@ -85,6 +87,7 @@ namespace DataAccess.DB
             {
                 DbCon = new OracleConnection();
                 Cmd = new OracleCommand();
+                (Cmd as OracleCommand).FetchSize = (Cmd as OracleCommand).FetchSize * 8;
                 Para = new OracleParameter();
                 IDa = new OracleDataAdapter();
             }
@@ -151,20 +154,23 @@ namespace DataAccess.DB
         /// <param name="StoredProcName">預存程序名稱</param>
         /// <param name="Parameters">預存程序的參數陣列</param>
         /// <returns></returns>
-        private IDbCommand BuildIntCommand(string StoredProcName, IDataParameter[] Parameters)
+        private IDbCommand BuildIntCommand(string StoredProcName, IDataParameter[] Parameters, bool hasReturnValue = false)
         {
             IDbCommand command = BuildQueryCommand(StoredProcName, Parameters);
-            IDbDataParameter Parameter = Para;
-            Parameter.ParameterName = "ReturnValue";
-            Parameter.DbType = DbType.Int32;
-            Parameter.Size = 4;
-            Parameter.Direction = ParameterDirection.ReturnValue;
-            Parameter.Precision = 0;
-            Parameter.Scale = 0;
-            Parameter.SourceColumn = string.Empty;
-            Parameter.SourceVersion = DataRowVersion.Default;
-            Parameter.Value = null;
-            command.Parameters.Add(Parameter);
+            if (hasReturnValue)
+            {
+                IDbDataParameter Parameter = Para;
+                Parameter.ParameterName = "ReturnValue";
+                Parameter.DbType = DbType.Int32;
+                Parameter.Size = 4;
+                Parameter.Direction = ParameterDirection.ReturnValue;
+                Parameter.Precision = 0;
+                Parameter.Scale = 0;
+                Parameter.SourceColumn = string.Empty;
+                Parameter.SourceVersion = DataRowVersion.Default;
+                Parameter.Value = null;
+                command.Parameters.Add(Parameter);
+            }
             return command;
         }
 
@@ -262,7 +268,7 @@ namespace DataAccess.DB
         public void RunProcedure(string StoredProcName, IDataParameter[] Parameters, string Connection, out int rowsAffected, bool IsUseTransaction)
         {
             IDbCommand command = BuildIntCommand(StoredProcName, Parameters);
-            IDbTransaction trans; 
+            IDbTransaction trans;
             try
             {
                 Open(Connection);
@@ -320,9 +326,9 @@ namespace DataAccess.DB
         /// <param name="Parameters">預存程序參數陣列</param>
         /// <param name="Connection">Connection名稱</param>
         /// <returns></returns>
-        public IDataReader RunProcedure(string StoredProcName, IDataParameter[] Parameters, string Connection)
+        public IDataReader RunProcedure(string StoredProcName, IDataParameter[] Parameters, string Connection, bool hasReturnValue = false)
         {
-            IDbCommand command = BuildIntCommand(StoredProcName, Parameters);
+            IDbCommand command = BuildIntCommand(StoredProcName, Parameters, hasReturnValue);
             command.CommandType = CommandType.StoredProcedure;
             IDataReader sdr;
             try
@@ -336,7 +342,7 @@ namespace DataAccess.DB
             }
             finally
             {
-                CloseDB();
+                //CloseDB();
             }
             return sdr;
         }
@@ -396,7 +402,7 @@ namespace DataAccess.DB
                     Da = (MySqlDataAdapter)IDa;
                     Da.SelectCommand = (MySqlCommand)BuildQueryCommand(StoredProcName, Parameters);
                     Da.Fill(dt);
-                }   
+                }
             }
             catch (Exception ex)
             {
@@ -559,7 +565,7 @@ namespace DataAccess.DB
         public void RunProcedure(string StoredProcName, IDataParameter[] Parameters, ref DataSet Ds, string TableName, string Connection, bool IsUseTransaction)
         {
             DbDataAdapter Da;
-            IDbTransaction trans; 
+            IDbTransaction trans;
             try
             {
                 Open(Connection);
@@ -702,6 +708,7 @@ namespace DataAccess.DB
                 else if (Datatype == dbtype.Oracle)
                 {
                     Da = new OracleDataAdapter(strSQL, (OracleConnection)DbCon);
+                    (Da.SelectCommand as OracleCommand).FetchSize = (Da.SelectCommand as OracleCommand).FetchSize * 8;
                     Da.Fill(dt);
                 }
                 else if (Datatype == dbtype.MySql)
@@ -755,6 +762,7 @@ namespace DataAccess.DB
                 else if (Datatype == dbtype.Oracle)
                 {
                     Da = new OracleDataAdapter(strSQL, (OracleConnection)DbCon);
+                    (Da.SelectCommand as OracleCommand).FetchSize = (Da.SelectCommand as OracleCommand).FetchSize * 8;
                     Da.Fill(Ds, TableName);
                 }
                 else if (Datatype == dbtype.MySql)
@@ -806,6 +814,7 @@ namespace DataAccess.DB
                 else if (Datatype == dbtype.Oracle)
                 {
                     OracleCommand command = new OracleCommand(strSQL, (OracleConnection)DbCon);
+                    command.FetchSize = command.FetchSize * 8;
                     RowsAffected = command.ExecuteNonQuery();
                 }
                 else if (Datatype == dbtype.MySql)
@@ -817,7 +826,7 @@ namespace DataAccess.DB
             }
             catch (MySqlException ex) { RowsAffected = 0; throw new Exception(ex.Message, ex); }
             catch (OracleException ex) { RowsAffected = 0; throw new Exception(ex.Message, ex); }
-            catch (SqlException ex) { RowsAffected = 0; throw new Exception(ex.Message,ex); }
+            catch (SqlException ex) { RowsAffected = 0; throw new Exception(ex.Message, ex); }
             catch (Exception ex) { RowsAffected = 0; throw new Exception(ex.Message, ex); }
             finally
             {
@@ -971,7 +980,7 @@ namespace DataAccess.DB
             }
             catch (OracleException ex)
             {
-                if (transaction != null)transaction.Rollback();
+                if (transaction != null) transaction.Rollback();
                 return false;
                 throw new Exception(ex.Message, ex);
             }
@@ -1028,7 +1037,7 @@ namespace DataAccess.DB
             {
                 DbCon.Close();
                 DbCon.Dispose();
-                DbCon = null;  
+                DbCon = null;
             }
         }
 
