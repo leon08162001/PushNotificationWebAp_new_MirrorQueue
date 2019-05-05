@@ -1,0 +1,14 @@
+﻿/.vs
+/Common
+/DataAccess
+/DBContext
+/DBModel
+/DBRepositories
+/ExtendedDBModels
+/MoneySQContext
+/MQDemo
+/MQProducerDemo
+/packages
+/PushNotificationWebAp
+/WebApiAp
+/WindowsFormsCallWebApi
