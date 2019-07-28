@@ -67,6 +67,8 @@ namespace MQDemoProducer
                 JefferiesExcuReportEMS.SendName = config.jefferiesExcuReport_Sender_Topic;
                 JefferiesExcuReportEMS.UserName = config.EMSUserID;
                 JefferiesExcuReportEMS.PassWord = config.EMSPwd;
+                JefferiesExcuReportEMS.UseSSL = config.EMS_useSSL;
+                JefferiesExcuReportEMS.CertsPath = config.EMS_CertsPath;
                 JefferiesExcuReportEMS.IsDurableConsumer = true;
 
                 OTAExportEMS.Uri = config.EMS_network + ":" + config.EMS_service;
@@ -75,6 +77,8 @@ namespace MQDemoProducer
                 OTAExportEMS.SendName = config.otaExport_Sender_Topic;
                 OTAExportEMS.UserName = config.EMSUserID;
                 OTAExportEMS.PassWord = config.EMSPwd;
+                OTAExportEMS.UseSSL = config.EMS_useSSL;
+                OTAExportEMS.CertsPath = config.EMS_CertsPath;
                 OTAExportEMS.IsDurableConsumer = true;
             }
             catch (Exception ex)

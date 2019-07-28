@@ -63,6 +63,7 @@ namespace MQDemoSubscriber
                 JefferiesExcuReportEMS.UserName = config.EMSUserID;
                 JefferiesExcuReportEMS.PassWord = config.EMSPwd;
                 JefferiesExcuReportEMS.UseSSL = config.EMS_useSSL;
+                JefferiesExcuReportEMS.CertsPath = config.EMS_CertsPath;
                 (JefferiesExcuReportEMS as BatchEMSAdapter).EMSBatchFinished += new BatchEMSAdapter.EMSBatchFinishedEventHandler(JefferiesExcuReportEMS_EMSBatchFinished);
 
                 OTAExportEMS.UseSharedConnection = false;
@@ -73,6 +74,7 @@ namespace MQDemoSubscriber
                 OTAExportEMS.UserName = config.EMSUserID;
                 OTAExportEMS.PassWord = config.EMSPwd;
                 OTAExportEMS.UseSSL = config.EMS_useSSL;
+                OTAExportEMS.CertsPath = config.EMS_CertsPath;
                 (OTAExportEMS as BatchEMSAdapter).EMSBatchFinished += new BatchEMSAdapter.EMSBatchFinishedEventHandler(OTAExportEMS_EMSBatchFinished);
 
                 cboDestinationFeature.SelectedIndex = 0;

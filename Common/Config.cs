@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.Remoting.Contexts;
 
 namespace Common
@@ -32,6 +34,7 @@ namespace Common
         public string EMS_service;
         public string EMS_network;
         public bool EMS_useSSL = false;
+        public List<string> EMS_CertsPath = new List<string>();
         public string EMSReceivedMessageReservedSeconds = "30";
 
         //Y77
@@ -158,6 +161,16 @@ namespace Common
                             case "EMS_USESSL":
                                 EMS_useSSL = Convert.ToBoolean(config_value);
                                 break;
+                            case "EMS_CERTSPATH":
+                                if (config_value.IndexOf(",") == -1)
+                                {
+                                    EMS_CertsPath.Add(config_value);
+                                }
+                                else
+                                {
+                                    EMS_CertsPath = config_value.Split(new char[] { ',' }).ToList<string>();
+                                }
+                                break;                      
                             case "EMSRECEIVEDMESSAGERESERVEDSECONDS":
                             {
                                 int TestValue;

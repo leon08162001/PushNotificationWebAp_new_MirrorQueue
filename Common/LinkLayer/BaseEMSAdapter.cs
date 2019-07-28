@@ -82,6 +82,7 @@ namespace Common.LinkLayer
 
         protected bool _IsEventInUIThread = false;             //觸發事件時是否回到UI Thread預設為false
         protected bool _UseSSL = false;
+        protected List<string> _CertsPath = new List<string>();
 
         protected Timer HeartBeatTimer;
         protected int _HeartBeatInterval = 60;
@@ -233,6 +234,11 @@ namespace Common.LinkLayer
             get { return _UseSSL; }
             set { _UseSSL = value; }
         }
+        public List<string> CertsPath
+        {
+            get { return _CertsPath; }
+            set { _CertsPath = value; }
+        }
         /// <summary>
         /// 心跳訊息間隔(秒)
         /// </summary>
@@ -324,11 +330,11 @@ namespace Common.LinkLayer
                 {
                     if (Urls.Equals(""))
                     {
-                        EMSSharedConnection.Open(SingleUrl, ports, _UserName, _PassWord, _UseSSL, _IsDurableConsumer, _ClientID);
+                        EMSSharedConnection.Open(SingleUrl, ports, _UserName, _PassWord, _UseSSL, CertsPath, _IsDurableConsumer, _ClientID);
                     }
                     else
                     {
-                        EMSSharedConnection.Open(Urls, ports, _UserName, _PassWord, _UseSSL, _IsDurableConsumer, _ClientID);
+                        EMSSharedConnection.Open(Urls, ports, _UserName, _PassWord, _UseSSL, CertsPath, _IsDurableConsumer, _ClientID);
                     }
                     _Session = EMSSharedConnection.GetConnection().CreateSession(false, SessionMode.AutoAcknowledge);
                     _Connection = EMSSharedConnection.GetConnection();
@@ -345,14 +351,23 @@ namespace Common.LinkLayer
                     if (Urls.Equals(""))
                     {
                         _Factory = new ConnectionFactory(Util.GetEMSFailOverConnString(SingleUrl, ports, _UseSSL));
+                        if (_UseSSL)
+                        {
+                            EMSSharedConnection.SSLSetting(ref _Factory, SingleUrl, CertsPath);
+                        }
                     }
                     else
                     {
                         _Factory = new ConnectionFactory(Util.GetEMSFailOverConnString(Urls, ports, _UseSSL));
+                        if (_UseSSL)
+                        {
+                            EMSSharedConnection.SSLSetting(ref _Factory, Urls, CertsPath);
+                        }
                     }
                     _Factory.SetReconnAttemptCount(1200);     // 1200retries
                     _Factory.SetReconnAttemptDelay(5000);  // 5seconds
                     _Factory.SetReconnAttemptTimeout(20000); // 20seconds
+
                     if (IsDurableConsumer && !string.IsNullOrEmpty(ClientID)) _Factory.SetClientID(ClientID);
                     try
                     {
