@@ -34,6 +34,7 @@ namespace Common
         public string EMS_service;
         public string EMS_network;
         public bool EMS_useSSL = false;
+        public string EMSClientID;
         public List<string> EMS_CertsPath = new List<string>();
         public string EMSReceivedMessageReservedSeconds = "30";
 
@@ -135,7 +136,7 @@ namespace Common
                                 break;
                             case "MQCLIENTID":
                                 MQClientID = config_value;
-                                break;     
+                                break;
                             case "MQRECEIVEDMESSAGERESERVEDSECONDS":
                             {
                                 int TestValue;
@@ -160,6 +161,9 @@ namespace Common
                                 break;
                             case "EMS_USESSL":
                                 EMS_useSSL = Convert.ToBoolean(config_value);
+                                break;
+                            case "EMSCLIENTID":
+                                EMSClientID = config_value;
                                 break;
                             case "EMS_CERTSPATH":
                                 if (config_value.IndexOf(",") == -1)

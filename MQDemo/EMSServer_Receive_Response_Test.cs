@@ -47,6 +47,7 @@ namespace MQDemoSubscriber
                 string s = System.Threading.Thread.CurrentThread.ManagedThreadId.ToString();
                 applicationContext = ContextRegistry.GetContext();
                 config = (Config)applicationContext.GetObject("Config");
+                this.Text = this.Text + " " + config.EMSClientID;
                 txtURI.Text = config.EMS_network + ":" + config.EMS_service;
                 txtUserName.Text = config.EMSUserID;
                 txtPassword.Text = config.EMSPwd;
@@ -220,8 +221,8 @@ namespace MQDemoSubscriber
                 TopicController.HandleTopic(this, OTAExportEMS);
             }
             //持久訂閱者
-            JefferiesExcuReportEMS.Start("JefferiesDurableConsumer", true);
-            OTAExportEMS.Start("OTADurableConsumer", true);
+            JefferiesExcuReportEMS.Start("Jefferies" + config.EMSClientID, true);
+            OTAExportEMS.Start("OTA" + config.EMSClientID, true);
             //非持久訂閱者
             //JefferiesExcuReportEMS.Start();
             //OTAExportEMS.Start();
