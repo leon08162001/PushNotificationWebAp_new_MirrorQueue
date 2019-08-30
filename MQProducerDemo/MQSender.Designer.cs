@@ -73,10 +73,10 @@
             // btnConnect
             // 
             this.btnConnect.AutoSize = true;
-            this.btnConnect.Location = new System.Drawing.Point(120, 359);
-            this.btnConnect.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnConnect.Location = new System.Drawing.Point(90, 287);
+            this.btnConnect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(148, 29);
+            this.btnConnect.Size = new System.Drawing.Size(111, 23);
             this.btnConnect.TabIndex = 10;
             this.btnConnect.Text = "MQ Broker Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
@@ -86,40 +86,37 @@
             // 
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPassword.Location = new System.Drawing.Point(453, 122);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtPassword.Location = new System.Drawing.Point(345, 98);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ReadOnly = true;
-            this.txtPassword.Size = new System.Drawing.Size(245, 25);
+            this.txtPassword.Size = new System.Drawing.Size(185, 22);
             this.txtPassword.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(135, 94);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(103, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 15);
+            this.label1.Size = new System.Drawing.Size(25, 12);
             this.label1.TabIndex = 8;
             this.label1.Text = "URI";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(103, 128);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(79, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 15);
+            this.label2.Size = new System.Drawing.Size(51, 12);
             this.label2.TabIndex = 7;
             this.label2.Text = "Username";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(380, 128);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(287, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 15);
+            this.label3.Size = new System.Drawing.Size(48, 12);
             this.label3.TabIndex = 6;
             this.label3.Text = "Password";
             // 
@@ -127,11 +124,11 @@
             // 
             this.txtURI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtURI.Location = new System.Drawing.Point(179, 90);
-            this.txtURI.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtURI.Location = new System.Drawing.Point(140, 72);
+            this.txtURI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtURI.Name = "txtURI";
             this.txtURI.ReadOnly = true;
-            this.txtURI.Size = new System.Drawing.Size(519, 25);
+            this.txtURI.Size = new System.Drawing.Size(390, 22);
             this.txtURI.TabIndex = 4;
             // 
             // txtUserName
@@ -139,20 +136,20 @@
             this.txtUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUserName.Location = new System.Drawing.Point(179, 122);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtUserName.Location = new System.Drawing.Point(140, 98);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.ReadOnly = true;
-            this.txtUserName.Size = new System.Drawing.Size(192, 25);
+            this.txtUserName.Size = new System.Drawing.Size(139, 22);
             this.txtUserName.TabIndex = 5;
             // 
             // btn_Send
             // 
             this.btn_Send.AutoSize = true;
-            this.btn_Send.Location = new System.Drawing.Point(53, 60);
-            this.btn_Send.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btn_Send.Location = new System.Drawing.Point(40, 48);
+            this.btn_Send.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Send.Name = "btn_Send";
-            this.btn_Send.Size = new System.Drawing.Size(100, 40);
+            this.btn_Send.Size = new System.Drawing.Size(75, 32);
             this.btn_Send.TabIndex = 11;
             this.btn_Send.Text = "Send";
             this.btn_Send.UseVisualStyleBackColor = true;
@@ -161,10 +158,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 162);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(1, 130);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(160, 15);
+            this.label4.Size = new System.Drawing.Size(129, 12);
             this.label4.TabIndex = 13;
             this.label4.Text = "Send Jefferies Topic Name";
             // 
@@ -172,20 +168,19 @@
             // 
             this.txtJefferiesTopicName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtJefferiesTopicName.Location = new System.Drawing.Point(179, 158);
-            this.txtJefferiesTopicName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtJefferiesTopicName.Location = new System.Drawing.Point(140, 126);
+            this.txtJefferiesTopicName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtJefferiesTopicName.Name = "txtJefferiesTopicName";
             this.txtJefferiesTopicName.ReadOnly = true;
-            this.txtJefferiesTopicName.Size = new System.Drawing.Size(519, 25);
+            this.txtJefferiesTopicName.Size = new System.Drawing.Size(390, 22);
             this.txtJefferiesTopicName.TabIndex = 12;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 23);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(10, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 15);
+            this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 14;
             this.label5.Text = "發送筆數";
             // 
@@ -197,8 +192,8 @@
             0,
             0,
             0});
-            this.MessageNums.Location = new System.Drawing.Point(85, 19);
-            this.MessageNums.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MessageNums.Location = new System.Drawing.Point(64, 15);
+            this.MessageNums.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MessageNums.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -210,7 +205,7 @@
             0,
             0});
             this.MessageNums.Name = "MessageNums";
-            this.MessageNums.Size = new System.Drawing.Size(124, 25);
+            this.MessageNums.Size = new System.Drawing.Size(93, 22);
             this.MessageNums.TabIndex = 15;
             this.MessageNums.Value = new decimal(new int[] {
             1,
@@ -222,29 +217,28 @@
             // 
             this.txtMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMessage.Location = new System.Drawing.Point(123, 254);
-            this.txtMessage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtMessage.Location = new System.Drawing.Point(98, 203);
+            this.txtMessage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(573, 96);
+            this.txtMessage.Size = new System.Drawing.Size(431, 78);
             this.txtMessage.TabIndex = 16;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(63, 259);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(47, 207);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 15);
+            this.label6.Size = new System.Drawing.Size(44, 12);
             this.label6.TabIndex = 17;
             this.label6.Text = "Message";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(53, 60);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Location = new System.Drawing.Point(40, 48);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 29);
+            this.button1.Size = new System.Drawing.Size(92, 23);
             this.button1.TabIndex = 18;
             this.button1.Text = "連續時間發送";
             this.button1.UseVisualStyleBackColor = true;
@@ -253,8 +247,8 @@
             // SendSeconds
             // 
             this.SendSeconds.AutoSize = true;
-            this.SendSeconds.Location = new System.Drawing.Point(141, 23);
-            this.SendSeconds.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.SendSeconds.Location = new System.Drawing.Point(106, 18);
+            this.SendSeconds.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SendSeconds.Maximum = new decimal(new int[] {
             7200,
             0,
@@ -266,7 +260,7 @@
             0,
             0});
             this.SendSeconds.Name = "SendSeconds";
-            this.SendSeconds.Size = new System.Drawing.Size(99, 25);
+            this.SendSeconds.Size = new System.Drawing.Size(74, 22);
             this.SendSeconds.TabIndex = 19;
             this.SendSeconds.Value = new decimal(new int[] {
             5,
@@ -277,10 +271,9 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 27);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(6, 22);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 15);
+            this.label7.Size = new System.Drawing.Size(97, 12);
             this.label7.TabIndex = 20;
             this.label7.Text = "發送持續時間(秒)";
             // 
@@ -289,11 +282,11 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btn_Send);
             this.groupBox1.Controls.Add(this.MessageNums);
-            this.groupBox1.Location = new System.Drawing.Point(5, 394);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.Location = new System.Drawing.Point(4, 315);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox1.Size = new System.Drawing.Size(219, 101);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(164, 81);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "批次發送測試";
@@ -303,11 +296,11 @@
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.SendSeconds);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(460, 394);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox2.Location = new System.Drawing.Point(345, 315);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox2.Size = new System.Drawing.Size(243, 101);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(182, 81);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "多次發送測試";
@@ -315,10 +308,9 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 197);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(16, 158);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(142, 15);
+            this.label8.Size = new System.Drawing.Size(114, 12);
             this.label8.TabIndex = 23;
             this.label8.Text = "Send OTA Topic Name";
             // 
@@ -326,31 +318,30 @@
             // 
             this.txtOTATopicName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOTATopicName.Location = new System.Drawing.Point(179, 192);
-            this.txtOTATopicName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtOTATopicName.Location = new System.Drawing.Point(140, 154);
+            this.txtOTATopicName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOTATopicName.Name = "txtOTATopicName";
             this.txtOTATopicName.ReadOnly = true;
-            this.txtOTATopicName.Size = new System.Drawing.Size(519, 25);
+            this.txtOTATopicName.Size = new System.Drawing.Size(390, 22);
             this.txtOTATopicName.TabIndex = 24;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Location = new System.Drawing.Point(29, 2);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox3.Location = new System.Drawing.Point(22, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox3.Size = new System.Drawing.Size(639, 64);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(479, 51);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "說明：";
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(11, 23);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(8, 18);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(523, 34);
+            this.label9.Size = new System.Drawing.Size(392, 27);
             this.label9.TabIndex = 0;
             this.label9.Text = "對於表單MQ Client Receive & Show Test來說,此程式為Server端的發送程式;對於表單MQ Server Receive & Resp" +
     "onse Test來說,此程式為Client端的發送程式";
@@ -363,20 +354,19 @@
             "Queue",
             "VirtualTopic",
             "MirrorQueue"});
-            this.cboDestinationFeature.Location = new System.Drawing.Point(384, 362);
-            this.cboDestinationFeature.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cboDestinationFeature.Location = new System.Drawing.Point(288, 290);
+            this.cboDestinationFeature.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboDestinationFeature.Name = "cboDestinationFeature";
-            this.cboDestinationFeature.Size = new System.Drawing.Size(141, 23);
+            this.cboDestinationFeature.Size = new System.Drawing.Size(107, 20);
             this.cboDestinationFeature.TabIndex = 29;
             this.cboDestinationFeature.SelectedIndexChanged += new System.EventHandler(this.cboDestinationFeature_SelectedIndexChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(289, 367);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(217, 294);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 15);
+            this.label10.Size = new System.Drawing.Size(65, 12);
             this.label10.TabIndex = 28;
             this.label10.Text = "Queue/Topic";
             // 
@@ -385,11 +375,11 @@
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.btn_Send1);
             this.groupBox4.Controls.Add(this.MessageNums1);
-            this.groupBox4.Location = new System.Drawing.Point(233, 395);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox4.Location = new System.Drawing.Point(175, 316);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox4.Size = new System.Drawing.Size(219, 101);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(164, 81);
             this.groupBox4.TabIndex = 30;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "多次發送測試";
@@ -397,20 +387,19 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 23);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(10, 18);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 15);
+            this.label11.Size = new System.Drawing.Size(53, 12);
             this.label11.TabIndex = 14;
             this.label11.Text = "發送筆數";
             // 
             // btn_Send1
             // 
             this.btn_Send1.AutoSize = true;
-            this.btn_Send1.Location = new System.Drawing.Point(53, 60);
-            this.btn_Send1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btn_Send1.Location = new System.Drawing.Point(40, 48);
+            this.btn_Send1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Send1.Name = "btn_Send1";
-            this.btn_Send1.Size = new System.Drawing.Size(100, 40);
+            this.btn_Send1.Size = new System.Drawing.Size(75, 32);
             this.btn_Send1.TabIndex = 11;
             this.btn_Send1.Text = "Send";
             this.btn_Send1.UseVisualStyleBackColor = true;
@@ -424,8 +413,8 @@
             0,
             0,
             0});
-            this.MessageNums1.Location = new System.Drawing.Point(85, 19);
-            this.MessageNums1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MessageNums1.Location = new System.Drawing.Point(64, 15);
+            this.MessageNums1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MessageNums1.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -437,7 +426,7 @@
             0,
             0});
             this.MessageNums1.Name = "MessageNums1";
-            this.MessageNums1.Size = new System.Drawing.Size(124, 25);
+            this.MessageNums1.Size = new System.Drawing.Size(93, 22);
             this.MessageNums1.TabIndex = 15;
             this.MessageNums1.Value = new decimal(new int[] {
             1,
@@ -451,47 +440,47 @@
             this.cboFormat.Items.AddRange(new object[] {
             "Json",
             "Fix"});
-            this.cboFormat.Location = new System.Drawing.Point(179, 224);
-            this.cboFormat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboFormat.Location = new System.Drawing.Point(140, 179);
+            this.cboFormat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboFormat.Name = "cboFormat";
-            this.cboFormat.Size = new System.Drawing.Size(83, 23);
+            this.cboFormat.Size = new System.Drawing.Size(63, 20);
             this.cboFormat.TabIndex = 32;
             this.cboFormat.SelectedIndexChanged += new System.EventHandler(this.cboFormat_SelectedIndexChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(66, 226);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(49, 181);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(100, 15);
+            this.label12.Size = new System.Drawing.Size(80, 12);
             this.label12.TabIndex = 31;
             this.label12.Text = "Message Format";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(532, 367);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(405, 294);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(67, 15);
+            this.label13.Size = new System.Drawing.Size(53, 12);
             this.label13.TabIndex = 33;
             this.label13.Text = "發送筆數";
             // 
             // txtMessageCount
             // 
-            this.txtMessageCount.Location = new System.Drawing.Point(612, 361);
-            this.txtMessageCount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtMessageCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMessageCount.Location = new System.Drawing.Point(466, 289);
+            this.txtMessageCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMessageCount.Name = "txtMessageCount";
             this.txtMessageCount.ReadOnly = true;
-            this.txtMessageCount.Size = new System.Drawing.Size(83, 25);
+            this.txtMessageCount.Size = new System.Drawing.Size(63, 22);
             this.txtMessageCount.TabIndex = 34;
             // 
             // MQSender
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 499);
+            this.ClientSize = new System.Drawing.Size(530, 399);
             this.Controls.Add(this.txtMessageCount);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.cboFormat);
@@ -515,7 +504,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtURI);
             this.Controls.Add(this.txtUserName);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MQSender";
             this.Text = "MQSender";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
