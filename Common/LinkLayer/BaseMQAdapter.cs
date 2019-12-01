@@ -469,7 +469,7 @@ namespace Common.LinkLayer
                     {
                         AMQSharedConnection.Open(Urls, ports, _UserName, _PassWord, _UseSSL, _IsDurableConsumer, _ClientID);
                     }
-                    _Session = AMQSharedConnection.GetConnection().CreateSession(AcknowledgementMode.AutoAcknowledge);
+                    _Session = AMQSharedConnection.GetConnection().CreateSession(AcknowledgementMode.DupsOkAcknowledge);
                     _Connection = AMQSharedConnection.GetConnection();
                     //_Connection.ConnectionResumedListener += _Connection_ConnectionResumedListener;
                     //_Connection.ExceptionListener += _Connection_ExceptionListener;
@@ -518,7 +518,7 @@ namespace Common.LinkLayer
                         if (log.IsErrorEnabled) log.Error("BaseMQAdapter Start() Error", ex);
                         throw ex;
                     }
-                    _Session = _Connection.CreateSession(AcknowledgementMode.AutoAcknowledge);
+                    _Session = _Connection.CreateSession(AcknowledgementMode.DupsOkAcknowledge);
                     StartListener();
                     StartSender();
                     _UISyncContext = SynchronizationContext.Current;

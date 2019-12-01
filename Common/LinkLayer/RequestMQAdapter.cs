@@ -318,6 +318,7 @@ namespace Common.LinkLayer
                                 this.Handler.WorkItemQueue.Enqueue(ResultTable);
                             }
                             _IsResponseFinished = true;
+                            _Session.Commit();
                             RunOnMQResponseFinished(_ErrMsg, ResultTable);
                             ClearGuidInDictionary(MQMessageDictionary[MessageID].ToString());
                             _IsResponseFinished = false;
