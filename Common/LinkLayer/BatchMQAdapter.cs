@@ -234,7 +234,6 @@ namespace Common.LinkLayer
                             this.Handler.WorkItemQueue.Enqueue(MessageDT);
                         }
                         _IsBatchFinished = true;
-                        _Session.Commit();
                         RunOnMQBatchFinished(_ErrMsg, MessageDT);
                         _IsBatchFinished = false;
                     }
@@ -243,7 +242,6 @@ namespace Common.LinkLayer
                         _ErrMsg = ex1.Message;
                         RunOnMQMessageHandleFinished(_ErrMsg, null);
                         _IsBatchFinished = true;
-                        _Session.Commit();
                         RunOnMQBatchFinished(_ErrMsg, MessageDT);
                         _IsBatchFinished = false;
                         if (log.IsErrorEnabled) log.Error(ex1.Message, ex1);
@@ -355,7 +353,6 @@ namespace Common.LinkLayer
                                 this.Handler.WorkItemQueue.Enqueue(ResultTable);
                             }
                             _IsBatchFinished = true;
-                            _Session.Commit();
                             RunOnMQBatchFinished(_ErrMsg, ResultTable);
                             ClearGuidInDictionary(MQMessageDictionary[MessageID].ToString());
                             _IsBatchFinished = false;
