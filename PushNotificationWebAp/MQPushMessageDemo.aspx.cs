@@ -84,7 +84,7 @@ namespace PushNotificationWebAp
 
             JefferiesExcuReportMQ.Uri = config.MQ_network + ":" + config.MQ_service;
             JefferiesExcuReportMQ.MessageTimeOut = 30;
-            JefferiesExcuReportMQ.DestinationFeature = DestinationFeature.VirtualTopic;
+            JefferiesExcuReportMQ.DestinationFeature = DestinationFeature.Queue;
             //JefferiesExcuReportMQ.DestinationFeature = DestinationFeature.Queue;
             //JefferiesExcuReportMQ.SendName = txtReceiverID.Text.Trim();
             JefferiesExcuReportMQ.UserName = config.MQUserID;
