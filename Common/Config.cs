@@ -174,7 +174,7 @@ namespace Common
                                 {
                                     EMS_CertsPath = config_value.Split(new char[] { ',' }).ToList<string>();
                                 }
-                                break;                      
+                                break;
                             case "EMSRECEIVEDMESSAGERESERVEDSECONDS":
                             {
                                 int TestValue;
