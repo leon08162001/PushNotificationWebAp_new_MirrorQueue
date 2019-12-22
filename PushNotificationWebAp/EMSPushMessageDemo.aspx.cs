@@ -91,6 +91,10 @@ namespace PushNotificationWebAp
             JefferiesExcuReportEMS.UserName = config.EMSUserID;
             JefferiesExcuReportEMS.PassWord = config.EMSPwd;
             JefferiesExcuReportEMS.UseSSL = config.EMS_useSSL;
+            if (config.EMS_useSSL)
+            {
+                JefferiesExcuReportEMS.CertsPath = config.EMS_CertsPath;
+            }
             Session["JefferiesExcuReportEMS"] = JefferiesExcuReportEMS;
         }
 
