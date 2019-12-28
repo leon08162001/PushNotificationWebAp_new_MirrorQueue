@@ -1,13 +1,14 @@
-using System;
-using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
+using MySql.Data.MySqlClient;
 //using System.Data.OracleClient;
 using Oracle.ManagedDataAccess.Client;
-using System.Data.OleDb;
-using MySql.Data.MySqlClient;
-using System.Data.Odbc;
-using System.Data.Common;
+using System;
+using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
+using System.Data.Common;
+using System.Data.OleDb;
+using System.Data.SqlClient;
 
 /// <summary>
 /// 資料存取控制元件
@@ -17,13 +18,14 @@ namespace DataAccess.DB
     [Serializable()]
     public class Dac : IDisposable
     {
-        private dbtype Datatype;
+        private dbkind Datatype;
         private IDbConnection DbCon;
         private IDbCommand Cmd;
         private IDbDataParameter Para;
         private IDataAdapter IDa;
         private int _CommandTimeOut = 600;
         private string _ConnectionConfigName = "Default";
+        private SqlDatabase db;
 
         /// <summary>
         /// 執行SQL指令TimeOut的時間(秒)
@@ -54,36 +56,35 @@ namespace DataAccess.DB
             }
         }
 
-        public Dac(dbtype dbtype)
+        public Dac(dbkind dbkind)
         {
-            SetDBType(dbtype);
+            Setdbkind(dbkind);
         }
 
-        public Dac(dbtype dbtype, string ConnectionConfigName)
+        public Dac(dbkind dbkind, string ConnectionConfigName)
         {
-            SetDBType(dbtype);
-            Datatype = dbtype;
+            Setdbkind(dbkind);
             this._ConnectionConfigName = ConnectionConfigName;
         }
 
-        private void SetDBType(dbtype dbtype)
+        private void Setdbkind(dbkind dbkind)
         {
-            Datatype = dbtype;
-            if (Datatype == dbtype.Access || Datatype == dbtype.Excel)
+            Datatype = dbkind;
+            if (Datatype == dbkind.Access || Datatype == dbkind.Excel)
             {
                 DbCon = new OleDbConnection();
                 Cmd = new OleDbCommand();
                 Para = new OleDbParameter();
                 IDa = new OleDbDataAdapter();
             }
-            else if (dbtype == dbtype.SQL_Server)
+            else if (dbkind == dbkind.SQL_Server)
             {
                 DbCon = new SqlConnection();
                 Cmd = new SqlCommand();
                 Para = new SqlParameter();
                 IDa = new SqlDataAdapter();
             }
-            else if (dbtype == dbtype.Oracle)
+            else if (dbkind == dbkind.Oracle)
             {
                 DbCon = new OracleConnection();
                 Cmd = new OracleCommand();
@@ -91,7 +92,7 @@ namespace DataAccess.DB
                 Para = new OracleParameter();
                 IDa = new OracleDataAdapter();
             }
-            else if (dbtype == dbtype.MySql)
+            else if (dbkind == dbkind.MySql)
             {
                 DbCon = new MySqlConnection();
                 Cmd = new MySqlCommand();
@@ -107,6 +108,7 @@ namespace DataAccess.DB
         {
             if (ConnectionStr == "") { ConnectionStr = ConfigurationManager.ConnectionStrings[this.ConnectionConfigName].ConnectionString; }
             DbCon.ConnectionString = ConnectionStr;
+            db = new SqlDatabase(DbCon.ConnectionString);
             DbCon.Open();
         }
 
@@ -140,8 +142,8 @@ namespace DataAccess.DB
         /// // Create parameter array
         ///	SqlParameter[] parameters =
         ///	{
-        ///		new SqlParameter( "@LOGIN_ID", SqlDbType.NVarChar, 50 ),	// 0
-        ///		new SqlParameter( "@DOMAIN", SqlDbType.NVarChar, 50 ),	// 1
+        ///		new SqlParameter( "@LOGIN_ID", Sqldbkind.NVarChar, 50 ),	// 0
+        ///		new SqlParameter( "@DOMAIN", Sqldbkind.NVarChar, 50 ),	// 1
         ///	};
         ///	
         ///	// Set parameter values and directions
@@ -184,8 +186,8 @@ namespace DataAccess.DB
         /// // Create parameter array
         ///	SqlParameter[] parameters =
         ///	{
-        ///		new SqlParameter( "@LOGIN_ID", SqlDbType.NVarChar, 50 ),	// 0
-        ///		new SqlParameter( "@DOMAIN", SqlDbType.NVarChar, 50 ),	// 1
+        ///		new SqlParameter( "@LOGIN_ID", Sqldbkind.NVarChar, 50 ),	// 0
+        ///		new SqlParameter( "@DOMAIN", Sqldbkind.NVarChar, 50 ),	// 1
         ///	};
         ///	
         ///	// Set parameter values and directions
@@ -226,8 +228,8 @@ namespace DataAccess.DB
         /// // Create parameter array
         ///	SqlParameter[] parameters =
         ///	{
-        ///		new SqlParameter( "@LOGIN_ID", SqlDbType.NVarChar, 50 ),	// 0
-        ///		new SqlParameter( "@DOMAIN", SqlDbType.NVarChar, 50 ),	// 1
+        ///		new SqlParameter( "@LOGIN_ID", Sqldbkind.NVarChar, 50 ),	// 0
+        ///		new SqlParameter( "@DOMAIN", Sqldbkind.NVarChar, 50 ),	// 1
         ///	};
         ///	
         ///	// Set parameter values and directions
@@ -311,8 +313,8 @@ namespace DataAccess.DB
         /// // Create parameter array
         ///	SqlParameter[] parameters =
         ///	{
-        ///		new SqlParameter( "@LOGIN_ID", SqlDbType.NVarChar, 50 ),	// 0
-        ///		new SqlParameter( "@DOMAIN", SqlDbType.NVarChar, 50 ),	// 1
+        ///		new SqlParameter( "@LOGIN_ID", Sqldbkind.NVarChar, 50 ),	// 0
+        ///		new SqlParameter( "@DOMAIN", Sqldbkind.NVarChar, 50 ),	// 1
         ///	};
         ///	
         ///	// Set parameter values and directions
@@ -356,8 +358,8 @@ namespace DataAccess.DB
         /// // Create parameter array
         ///	SqlParameter[] parameters =
         ///	{
-        ///		new SqlParameter( "@LOGIN_ID", SqlDbType.NVarChar, 50 ),	// 0
-        ///		new SqlParameter( "@DOMAIN", SqlDbType.NVarChar, 50 ),	// 1
+        ///		new SqlParameter( "@LOGIN_ID", Sqldbkind.NVarChar, 50 ),	// 0
+        ///		new SqlParameter( "@DOMAIN", Sqldbkind.NVarChar, 50 ),	// 1
         ///	};
         ///	
         ///	// Set parameter values and directions
@@ -379,25 +381,25 @@ namespace DataAccess.DB
             try
             {
                 Open(Connection);
-                if (Datatype == dbtype.Access || Datatype == dbtype.Excel)
+                if (Datatype == dbkind.Access || Datatype == dbkind.Excel)
                 {
                     Da = (OleDbDataAdapter)IDa;
                     Da.SelectCommand = (OleDbCommand)BuildQueryCommand(StoredProcName, Parameters);
                     Da.Fill(dt);
                 }
-                else if (Datatype == dbtype.SQL_Server)
+                else if (Datatype == dbkind.SQL_Server)
                 {
                     Da = (SqlDataAdapter)IDa;
                     Da.SelectCommand = (SqlCommand)BuildQueryCommand(StoredProcName, Parameters);
                     Da.Fill(dt);
                 }
-                else if (Datatype == dbtype.Oracle)
+                else if (Datatype == dbkind.Oracle)
                 {
                     Da = (OracleDataAdapter)IDa;
                     Da.SelectCommand = (OracleCommand)BuildQueryCommand(StoredProcName, Parameters);
                     Da.Fill(dt);
                 }
-                else if (Datatype == dbtype.MySql)
+                else if (Datatype == dbkind.MySql)
                 {
                     Da = (MySqlDataAdapter)IDa;
                     Da.SelectCommand = (MySqlCommand)BuildQueryCommand(StoredProcName, Parameters);
@@ -423,13 +425,13 @@ namespace DataAccess.DB
             try
             {
                 Open(Connection);
-                if (Datatype == dbtype.Access || Datatype == dbtype.Excel)
+                if (Datatype == dbkind.Access || Datatype == dbkind.Excel)
                 {
                     Da = (OleDbDataAdapter)IDa;
                     Da.SelectCommand = (OleDbCommand)BuildQueryCommand(StoredProcName, Parameters);
                     Da.Fill(dt);
                 }
-                else if (Datatype == dbtype.SQL_Server)
+                else if (Datatype == dbkind.SQL_Server)
                 {
                     Da = (SqlDataAdapter)IDa;
                     Da.SelectCommand = (SqlCommand)BuildQueryCommand(StoredProcName, Parameters);
@@ -453,7 +455,7 @@ namespace DataAccess.DB
                         Da.Fill(dt);
                     }
                 }
-                else if (Datatype == dbtype.Oracle)
+                else if (Datatype == dbkind.Oracle)
                 {
                     Da = (OracleDataAdapter)IDa;
                     Da.SelectCommand = (OracleCommand)BuildQueryCommand(StoredProcName, Parameters);
@@ -477,7 +479,7 @@ namespace DataAccess.DB
                         Da.Fill(dt);
                     }
                 }
-                else if (Datatype == dbtype.MySql)
+                else if (Datatype == dbkind.MySql)
                 {
                     Da = (MySqlDataAdapter)IDa;
                     Da.SelectCommand = (MySqlCommand)BuildQueryCommand(StoredProcName, Parameters);
@@ -504,8 +506,8 @@ namespace DataAccess.DB
         /// // Create parameter array
         ///	SqlParameter[] parameters =
         ///	{
-        ///		new SqlParameter( "@LOGIN_ID", SqlDbType.NVarChar, 50 ),	// 0
-        ///		new SqlParameter( "@DOMAIN", SqlDbType.NVarChar, 50 ),	// 1
+        ///		new SqlParameter( "@LOGIN_ID", Sqldbkind.NVarChar, 50 ),	// 0
+        ///		new SqlParameter( "@DOMAIN", Sqldbkind.NVarChar, 50 ),	// 1
         ///	};
         ///	
         ///	// Set parameter values and directions
@@ -527,25 +529,25 @@ namespace DataAccess.DB
             try
             {
                 Open(Connection);
-                if (Datatype == dbtype.Access || Datatype == dbtype.Excel)
+                if (Datatype == dbkind.Access || Datatype == dbkind.Excel)
                 {
                     Da = new OleDbDataAdapter();
                     Da.SelectCommand = (OleDbCommand)BuildQueryCommand(StoredProcName, Parameters);
                     Da.Fill(Ds, TableName);
                 }
-                else if (Datatype == dbtype.SQL_Server)
+                else if (Datatype == dbkind.SQL_Server)
                 {
                     Da = new SqlDataAdapter();
                     Da.SelectCommand = (SqlCommand)BuildQueryCommand(StoredProcName, Parameters);
                     Da.Fill(Ds, TableName);
                 }
-                else if (Datatype == dbtype.Oracle)
+                else if (Datatype == dbkind.Oracle)
                 {
                     Da = new OracleDataAdapter();
                     Da.SelectCommand = (OracleCommand)BuildQueryCommand(StoredProcName, Parameters);
                     Da.Fill(Ds, TableName);
                 }
-                else if (Datatype == dbtype.MySql)
+                else if (Datatype == dbkind.MySql)
                 {
                     Da = new MySqlDataAdapter();
                     Da.SelectCommand = (MySqlCommand)BuildQueryCommand(StoredProcName, Parameters);
@@ -569,13 +571,13 @@ namespace DataAccess.DB
             try
             {
                 Open(Connection);
-                if (Datatype == dbtype.Access || Datatype == dbtype.Excel)
+                if (Datatype == dbkind.Access || Datatype == dbkind.Excel)
                 {
                     Da = new OleDbDataAdapter();
                     Da.SelectCommand = (OleDbCommand)BuildQueryCommand(StoredProcName, Parameters);
                     Da.Fill(Ds, TableName);
                 }
-                else if (Datatype == dbtype.SQL_Server)
+                else if (Datatype == dbkind.SQL_Server)
                 {
                     Da = new SqlDataAdapter();
                     Da.SelectCommand = (SqlCommand)BuildQueryCommand(StoredProcName, Parameters);
@@ -599,7 +601,7 @@ namespace DataAccess.DB
                         Da.Fill(Ds, TableName);
                     }
                 }
-                else if (Datatype == dbtype.Oracle)
+                else if (Datatype == dbkind.Oracle)
                 {
                     Da = new OracleDataAdapter();
                     Da.SelectCommand = (OracleCommand)BuildQueryCommand(StoredProcName, Parameters);
@@ -623,7 +625,7 @@ namespace DataAccess.DB
                         Da.Fill(Ds, TableName);
                     }
                 }
-                else if (Datatype == dbtype.MySql)
+                else if (Datatype == dbkind.MySql)
                 {
                     Da = new MySqlDataAdapter();
                     Da.SelectCommand = (MySqlCommand)BuildQueryCommand(StoredProcName, Parameters);
@@ -654,14 +656,19 @@ namespace DataAccess.DB
         /// <param name="strSQL">SQL 語法</param>
         /// <param name="Connection">Connection名稱</param>
         /// <param name="Returnobj">回傳結果物件</param>
-        public void RunSQL(string strSQL, string Connection, out object Returnobj)
+        /// <param name="values">參數值</param>
+        public void RunSQL(string strSQL, string Connection, out object Returnobj, object[] values = null)
         {
-            IDbCommand command = Cmd;
-            Cmd.CommandText = strSQL;
-            Cmd.Connection = DbCon;
+            //IDbCommand command = Cmd;
+            //Cmd.CommandText = strSQL;
+            //Cmd.Connection = DbCon;
+            IDbCommand command;
             try
             {
                 Open(Connection);
+                command = db.GetSqlStringCommand(strSQL);
+                BuildParameters(ref command, values);
+                command.Connection = DbCon;
                 Returnobj = command.ExecuteScalar();
             }
             catch (MySqlException ex) { Returnobj = null; throw new Exception(ex.Message, ex); }
@@ -673,8 +680,6 @@ namespace DataAccess.DB
                 CloseDB();
             }
         }
-
-
         /// <summary>
         /// 執行SQL Command並傳回DataTable
         /// </summary>
@@ -687,33 +692,42 @@ namespace DataAccess.DB
         ///</example>
         /// <param name="strSQL">SQL語法</param>
         /// <param name="TableName">DataTable名稱</param>
+        /// <param name="Connection">Connection名稱</param>
+        /// <param name="values">參數值</param>
         /// <returns></returns>
-        public DataTable RunSQL(string strSQL, string TableName, string Connection)
+        public DataTable RunSQL(string strSQL, string TableName, string Connection, object[] values = null)
         {
             DataTable dt = new DataTable(TableName);
             DbDataAdapter Da;
             try
             {
                 Open(Connection);
-                if (Datatype == dbtype.Access || Datatype == dbtype.Excel)
+                IDbCommand command = db.GetSqlStringCommand(strSQL);
+                BuildParameters(ref command, values);
+                command.Connection = DbCon;
+                if (Datatype == dbkind.Access || Datatype == dbkind.Excel)
                 {
-                    Da = new OleDbDataAdapter(strSQL, (OleDbConnection)DbCon);
+                    //Da = new OleDbDataAdapter(strSQL, (OleDbConnection)DbCon);
+                    Da = new OleDbDataAdapter((OleDbCommand)command);
                     Da.Fill(dt);
                 }
-                else if (Datatype == dbtype.SQL_Server)
+                else if (Datatype == dbkind.SQL_Server)
                 {
-                    Da = new SqlDataAdapter(strSQL, (SqlConnection)DbCon);
+                    //Da = new SqlDataAdapter(strSQL, (SqlConnection)DbCon);
+                    Da = new SqlDataAdapter((SqlCommand)command);
                     Da.Fill(dt);
                 }
-                else if (Datatype == dbtype.Oracle)
+                else if (Datatype == dbkind.Oracle)
                 {
-                    Da = new OracleDataAdapter(strSQL, (OracleConnection)DbCon);
+                    //Da = new OracleDataAdapter(strSQL, (OracleConnection)DbCon);
+                    Da = new OracleDataAdapter((OracleCommand)command);
                     (Da.SelectCommand as OracleCommand).FetchSize = (Da.SelectCommand as OracleCommand).FetchSize * 8;
                     Da.Fill(dt);
                 }
-                else if (Datatype == dbtype.MySql)
+                else if (Datatype == dbkind.MySql)
                 {
-                    Da = new MySqlDataAdapter(strSQL, (MySqlConnection)DbCon);
+                    //Da = new MySqlDataAdapter(strSQL, (MySqlConnection)DbCon);
+                    Da = new MySqlDataAdapter((MySqlCommand)command);
                     Da.Fill(dt);
                 }
             }
@@ -743,31 +757,39 @@ namespace DataAccess.DB
         /// <param name="Ds">DataSet物件</param>
         /// <param name="TableName">DataTable名稱</param>
         /// <param name="Connection">Connection名稱</param>
-        public void RunSQL(string strSQL, ref DataSet Ds, string TableName, string Connection)
+        /// <param name="values">參數值</param>
+        public void RunSQL(string strSQL, ref DataSet Ds, string TableName, string Connection, object[] values = null)
         {
             try
             {
                 Open(Connection);
                 DbDataAdapter Da;
-                if (Datatype == dbtype.Access || Datatype == dbtype.Excel)
+                IDbCommand command = db.GetSqlStringCommand(strSQL);
+                BuildParameters(ref command, values);
+                command.Connection = DbCon;
+                if (Datatype == dbkind.Access || Datatype == dbkind.Excel)
                 {
-                    Da = new OleDbDataAdapter(strSQL, (OleDbConnection)DbCon);
+                    //Da = new OleDbDataAdapter(strSQL, (OleDbConnection)DbCon);
+                    Da = new OleDbDataAdapter((OleDbCommand)command);
                     Da.Fill(Ds, TableName);
                 }
-                else if (Datatype == dbtype.SQL_Server)
+                else if (Datatype == dbkind.SQL_Server)
                 {
-                    Da = new SqlDataAdapter(strSQL, (SqlConnection)DbCon);
+                    //Da = new SqlDataAdapter(strSQL, (SqlConnection)DbCon);
+                    Da = new SqlDataAdapter((SqlCommand)command);
                     Da.Fill(Ds, TableName);
                 }
-                else if (Datatype == dbtype.Oracle)
+                else if (Datatype == dbkind.Oracle)
                 {
-                    Da = new OracleDataAdapter(strSQL, (OracleConnection)DbCon);
+                    // Da = new OracleDataAdapter(strSQL, (OracleConnection)DbCon);
+                    Da = new OracleDataAdapter((OracleCommand)command);
                     (Da.SelectCommand as OracleCommand).FetchSize = (Da.SelectCommand as OracleCommand).FetchSize * 8;
                     Da.Fill(Ds, TableName);
                 }
-                else if (Datatype == dbtype.MySql)
+                else if (Datatype == dbkind.MySql)
                 {
-                    Da = new MySqlDataAdapter(strSQL, (MySqlConnection)DbCon);
+                    //Da = new MySqlDataAdapter(strSQL, (MySqlConnection)DbCon);
+                    Da = new MySqlDataAdapter((MySqlCommand)command);
                     Da.Fill(Ds, TableName);
                 }
             }
@@ -780,7 +802,6 @@ namespace DataAccess.DB
                 CloseDB();
             }
         }
-
         /// <summary>
         /// 執行SQL Command並傳回影響的列數
         /// </summary>
@@ -795,31 +816,35 @@ namespace DataAccess.DB
         /// <param name="strSQL">T-SQL語法</param>
         /// <param name="RowsAffected">受影響的列數</param>
         /// <param name="Connection">連線字串</param>
-        public void RunSQL(string strSQL, out int RowsAffected, string Connection)
+        /// <param name="values">參數值</param>
+        public void RunSQL(string strSQL, out int RowsAffected, string Connection, object[] values = null)
         {
             RowsAffected = 0;
             try
             {
                 Open(Connection);
-                if (Datatype == dbtype.Access || Datatype == dbtype.Excel)
+                IDbCommand command = db.GetSqlStringCommand(strSQL);
+                BuildParameters(ref command, values);
+                command.Connection = DbCon;
+                if (Datatype == dbkind.Access || Datatype == dbkind.Excel)
                 {
-                    OleDbCommand command = new OleDbCommand(strSQL, (OleDbConnection)DbCon);
+                    //OleDbCommand command = new OleDbCommand(strSQL, (OleDbConnection)DbCon);
                     RowsAffected = command.ExecuteNonQuery();
                 }
-                else if (Datatype == dbtype.SQL_Server)
+                else if (Datatype == dbkind.SQL_Server)
                 {
-                    SqlCommand command = new SqlCommand(strSQL, (SqlConnection)DbCon);
+                    //SqlCommand command = new SqlCommand(strSQL, (SqlConnection)DbCon);
                     RowsAffected = command.ExecuteNonQuery();
                 }
-                else if (Datatype == dbtype.Oracle)
+                else if (Datatype == dbkind.Oracle)
                 {
-                    OracleCommand command = new OracleCommand(strSQL, (OracleConnection)DbCon);
-                    command.FetchSize = command.FetchSize * 8;
+                    //OracleCommand command = new OracleCommand(strSQL, (OracleConnection)DbCon);
+                    (command as OracleCommand).FetchSize = (command as OracleCommand).FetchSize * 8;
                     RowsAffected = command.ExecuteNonQuery();
                 }
-                else if (Datatype == dbtype.MySql)
+                else if (Datatype == dbkind.MySql)
                 {
-                    MySqlCommand command = new MySqlCommand(strSQL, (MySqlConnection)DbCon);
+                    //MySqlCommand command = new MySqlCommand(strSQL, (MySqlConnection)DbCon);
                     RowsAffected = command.ExecuteNonQuery();
                 }
                 if (RowsAffected == 0) RowsAffected = 1;
@@ -858,7 +883,43 @@ namespace DataAccess.DB
             RunSQL(strSQL, out i, Connection);
             return (i > 0);
         }
+        public bool BulkAddToTable(DataTable DT, string TableName, string Connection)
+        {
+            bool IsInsertOk = false;
+            try
+            {
+                Open(Connection);
+                if (Datatype == dbkind.SQL_Server)
+                {
+                    DataRow[] rowArray = DT.Select();
 
+                    using (SqlBulkCopy bulkCopy = new SqlBulkCopy((SqlConnection)DbCon))
+                    {
+                        bulkCopy.DestinationTableName = TableName;
+                        try
+                        {
+                            // Write the array of rows to the destination.
+                            bulkCopy.WriteToServer(rowArray);
+                            IsInsertOk = true;
+                        }
+                        catch (Exception ex)
+                        {
+                            IsInsertOk = false;
+                            throw new Exception(ex.Message, ex);
+                        }
+                    }
+                }
+            }
+            catch (MySqlException ex) { throw new Exception(ex.Message, ex); }
+            catch (OracleException ex) { throw new Exception(ex.Message, ex); }
+            catch (SqlException ex) { throw new Exception(ex.Message, ex); }
+            catch (Exception ex) { throw new Exception(ex.Message, ex); }
+            finally
+            {
+                CloseDB();
+            }
+            return IsInsertOk;
+        }
         /// <summary>
         /// 執行SQL Command並傳回成功或失敗
         /// </summary>
@@ -874,12 +935,13 @@ namespace DataAccess.DB
         ///</code>
         ///</example>
         /// <param name="strSQL">The STR SQL.</param>
-        /// <param name="strConnectionKey">The connectionstring.</param>
+        /// <param name="strConnection">The connectionstring.</param>
+        /// <param name="values">參數值</param>
         /// <returns></returns>
-        public bool ExecuteSQL(string strSQL, string strConnection)
+        public bool ExecuteSQL(string strSQL, string strConnection, object[] values = null)
         {
             int i = 0;
-            RunSQL(strSQL, out i, strConnection);
+            RunSQL(strSQL, out i, strConnection, values);
             return (i > 0);
         }
 
@@ -962,16 +1024,16 @@ namespace DataAccess.DB
                 {
                     if (strSQL != "" && strSQL != null)
                     {
-                        if (Datatype == dbtype.Access || Datatype == dbtype.Excel)
+                        if (Datatype == dbkind.Access || Datatype == dbkind.Excel)
                             new OleDbCommand(strSQL, (OleDbConnection)DbCon, (OleDbTransaction)transaction).ExecuteNonQuery();
-                        else if (Datatype == dbtype.SQL_Server)
+                        else if (Datatype == dbkind.SQL_Server)
                             new SqlCommand(strSQL, (SqlConnection)DbCon, (SqlTransaction)transaction).ExecuteNonQuery();
-                        else if (Datatype == dbtype.Oracle)
+                        else if (Datatype == dbkind.Oracle)
                         {
                             transaction = ((OracleConnection)DbCon).BeginTransaction();
                             new OracleCommand(strSQL, (OracleConnection)DbCon).ExecuteNonQuery();
                         }
-                        else if (Datatype == dbtype.MySql)
+                        else if (Datatype == dbkind.MySql)
                             new MySqlCommand(strSQL, (MySqlConnection)DbCon, (MySqlTransaction)transaction).ExecuteNonQuery();
                     }
                 }
@@ -1042,5 +1104,61 @@ namespace DataAccess.DB
         }
 
         #endregion
+        private void BuildParameters(ref IDbCommand cmd, object[] values)
+        {
+            string sqlParamChar = string.Empty;
+            switch (Datatype)
+            {
+                case dbkind.SQL_Server:
+                case dbkind.Access:
+                case dbkind.Excel:
+                    sqlParamChar = "@";
+                    break;
+                case dbkind.Oracle:
+                    sqlParamChar = ":";
+                    break;
+                case dbkind.MySql:
+                    sqlParamChar = "?";
+                    break;
+            }
+            List<string> paramNames = BetweenStringsList(cmd.CommandText, sqlParamChar, " ");
+            if (values != null && values.Length > 0 && values.Length == paramNames.Count)
+            {
+                for (var i = 0; i < values.Length; i++)
+                {
+                    var parameter = cmd.CreateParameter();
+                    parameter.ParameterName = paramNames[i];
+                    parameter.Value = values[i];
+                    cmd.Parameters.Add(parameter);
+                }
+            }
+        }
+        private static List<string> BetweenStringsList(string text, string start, string end)
+        {
+            List<string> matched = new List<string>();
+
+            int indexStart = 0;
+            int indexEnd = 0;
+
+            bool exit = false;
+            while (!exit)
+            {
+                indexStart = text.IndexOf(start);
+
+                if (indexStart != -1)
+                {
+                    indexEnd = indexStart + text.Substring(indexStart).IndexOf(end);
+
+                    matched.Add(text.Substring(indexStart + start.Length, indexEnd - indexStart - start.Length));
+
+                    text = text.Substring(indexEnd + end.Length);
+                }
+                else
+                {
+                    exit = true;
+                }
+            }
+            return matched;
+        }
     }
 }
