@@ -939,7 +939,7 @@ namespace Common.LinkLayer
                             }
                             else
                             {
-                                _Consumer = _Session.CreateDurableConsumer(new ActiveMQTopic(_MirroredQueuePrefix + _ListenName), _Connection.ClientId, null, false);
+                                _Consumer = _Session.CreateDurableConsumer(new ActiveMQTopic(_MirroredQueuePrefix + _ListenName), _Connection.ClientId, _Selector, false);
                             }
                         }
                         else
@@ -1207,7 +1207,7 @@ namespace Common.LinkLayer
                             }
                             else
                             {
-                                _Consumer = _Session.CreateDurableConsumer(new ActiveMQTopic(_MirroredQueuePrefix + _ListenName), _Connection.ClientId, null, false);
+                                _Consumer = _Session.CreateDurableConsumer(new ActiveMQTopic(_MirroredQueuePrefix + _ListenName), _Connection.ClientId, _Selector, false);
                             }
                         }
                         else
